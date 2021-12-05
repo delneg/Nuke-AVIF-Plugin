@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import NukeWebPPlugin
+@testable import NukeAVIFPlugin
 
 class DataExtensionsTests: XCTestCase {
 

@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65FD4DCB275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
+		65FD4DCC275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
+		65FD4DCD275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
 		C7A377CC20334B7500339789 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
 		F80D73D7209FD9B10015EA10 /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* AVIFImage.swift */; };
 		F80D73F0209FD9B10015EA10 /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */; };
@@ -110,6 +113,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		65FD4DCA275CE0330050C55B /* sample.avif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.avif; sourceTree = "<group>"; };
 		C74750E12030E2FC00FA7FE2 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
 		F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests.swift; sourceTree = "<group>"; };
 		F80D746A209FD9B10015EA10 /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -296,6 +300,7 @@
 		F8FAA4D2200EF07300DD0BED /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				65FD4DCA275CE0330050C55B /* sample.avif */,
 				C74750E12030E2FC00FA7FE2 /* sample.gif */,
 				F8FAA4D3200EF08400DD0BED /* sample.webp */,
 			);
@@ -584,6 +589,7 @@
 			files = (
 				F80D7486209FDD810015EA10 /* sample.gif in Resources */,
 				F80D7487209FDD810015EA10 /* sample.webp in Resources */,
+				65FD4DCD275CE0330050C55B /* sample.avif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -607,6 +613,7 @@
 			files = (
 				C7A377CC20334B7500339789 /* sample.gif in Resources */,
 				F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */,
+				65FD4DCB275CE0330050C55B /* sample.avif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -623,6 +630,7 @@
 			files = (
 				F8E3455620993551002A0D95 /* sample.gif in Resources */,
 				F8E3455720993551002A0D95 /* sample.webp in Resources */,
+				65FD4DCC275CE0330050C55B /* sample.avif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

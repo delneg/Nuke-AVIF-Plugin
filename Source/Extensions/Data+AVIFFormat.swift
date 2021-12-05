@@ -24,8 +24,6 @@ extension Data {
         let bytesStart = index(startIndex, offsetBy: fileHeaderIndex)
         let data = subdata(in: bytesStart..<magicBytesEndIndex)
         return data.elementsEqual(avifBytes)
-//        let data = subdata(in: startIndex..<3)
-//        return data.elementsEqual([0x0,0x0,0x0])
     }
 
 }
