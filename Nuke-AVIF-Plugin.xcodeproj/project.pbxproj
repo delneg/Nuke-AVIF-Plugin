@@ -18,7 +18,7 @@
 		F80D7483209FDD810015EA10 /* NukeAVIFPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E345472099337A002A0D95 /* NukeAVIFPlugin.framework */; };
 		F80D7486209FDD810015EA10 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
 		F80D7487209FDD810015EA10 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
-		F80D7490209FDF170015EA10 /* WebPDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* WebPDecodeTests.swift */; };
+		F80D7490209FDF170015EA10 /* AVIFDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */; };
 		F8138E93209FE0530073DCF5 /* Nuke.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F80D7477209FDBE60015EA10 /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8138E94209FE07E0073DCF5 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D7477209FDBE60015EA10 /* Nuke.framework */; };
 		F814657E200EE40500364146 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -41,9 +41,9 @@
 		F8CFDAE420A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
 		F8CFDAE520A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
 		F8CFDAE620A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
-		F8CFDAE820A1305500C87102 /* WebPImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */; };
-		F8CFDAE920A1305500C87102 /* WebPImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */; };
-		F8CFDAEA20A1305500C87102 /* WebPImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */; };
+		F8CFDAE820A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */; };
+		F8CFDAE920A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */; };
+		F8CFDAEA20A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */; };
 		F8E344B42099337A002A0D95 /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* AVIFImage.swift */; };
 		F8E344CD2099337A002A0D95 /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */; };
 		F8E344D72099337A002A0D95 /* AVIFDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */; };
@@ -52,8 +52,8 @@
 		F8E345412099337A002A0D95 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8E3455620993551002A0D95 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
 		F8E3455720993551002A0D95 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
-		F8E345612099371C002A0D95 /* WebPDecodeTests_MacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E345602099371C002A0D95 /* WebPDecodeTests_MacOS.swift */; };
-		F8E345622099376B002A0D95 /* WebPDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* WebPDecodeTests.swift */; };
+		F8E345612099371C002A0D95 /* AVIFDecodeTests_MacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E345602099371C002A0D95 /* AVIFDecodeTests_MacOS.swift */; };
+		F8E345622099376B002A0D95 /* AVIFDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */; };
 		F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
 		F8FAA4D7200EF1FD00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
 		F8FAA4D9200EF2FA00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
@@ -111,7 +111,7 @@
 
 /* Begin PBXFileReference section */
 		C74750E12030E2FC00FA7FE2 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
-		F80A457E20197CE200825C6D /* WebPDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPDecodeTests.swift; sourceTree = "<group>"; };
+		F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests.swift; sourceTree = "<group>"; };
 		F80D746A209FD9B10015EA10 /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80D746D209FDB560015EA10 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F80D746E209FDB560015EA10 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
@@ -134,10 +134,10 @@
 		F8BAAEBF200EDE100001110D /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8BAAEC8200EDE100001110D /* NukeAVIFPlugin Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeAVIFPlugin Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
-		F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPImageDecoderTests.swift; sourceTree = "<group>"; };
+		F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFImageDecoderTests.swift; sourceTree = "<group>"; };
 		F8E345472099337A002A0D95 /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E3455C20993551002A0D95 /* NukeAVIFPlugin Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeAVIFPlugin Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8E345602099371C002A0D95 /* WebPDecodeTests_MacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebPDecodeTests_MacOS.swift; sourceTree = "<group>"; };
+		F8E345602099371C002A0D95 /* AVIFDecodeTests_MacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests_MacOS.swift; sourceTree = "<group>"; };
 		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
 		F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIFImageMacros.h; sourceTree = "<group>"; };
@@ -229,11 +229,11 @@
 			isa = PBXGroup;
 			children = (
 				F8146577200EE3C700364146 /* Info.plist */,
-				F8E345602099371C002A0D95 /* WebPDecodeTests_MacOS.swift */,
-				F80A457E20197CE200825C6D /* WebPDecodeTests.swift */,
+				F8E345602099371C002A0D95 /* AVIFDecodeTests_MacOS.swift */,
+				F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */,
 				F8FAA4D2200EF07300DD0BED /* Resource */,
 				F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */,
-				F8CFDAE720A1305500C87102 /* WebPImageDecoderTests.swift */,
+				F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -758,9 +758,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8CFDAEA20A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
+				F8CFDAEA20A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */,
 				F8CFDAE620A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
-				F80D7490209FDF170015EA10 /* WebPDecodeTests.swift in Sources */,
+				F80D7490209FDF170015EA10 /* AVIFDecodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -788,9 +788,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8CFDAE820A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
+				F8CFDAE820A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */,
 				F8CFDAE420A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
-				F8E345622099376B002A0D95 /* WebPDecodeTests.swift in Sources */,
+				F8E345622099376B002A0D95 /* AVIFDecodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -808,9 +808,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8CFDAE920A1305500C87102 /* WebPImageDecoderTests.swift in Sources */,
+				F8CFDAE920A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */,
 				F8CFDAE520A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
-				F8E345612099371C002A0D95 /* WebPDecodeTests_MacOS.swift in Sources */,
+				F8E345612099371C002A0D95 /* AVIFDecodeTests_MacOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -849,7 +849,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libwebp/**";
+				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -877,7 +877,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libwebp/**";
+				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -952,7 +952,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libwebp/**";
+				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -980,7 +980,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/watchOS",
 				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libwebp/**";
+				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1134,7 +1134,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libwebp/**";
+				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1162,7 +1162,7 @@
 					"$(PROJECT_DIR)/Carthage/Build/iOS",
 					"$(PROJECT_DIR)/Carthage/Build/tvOS",
 				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libwebp/**";
+				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
@@ -1230,7 +1230,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libwebp/**";
+				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -1257,7 +1257,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Carthage/Build/Mac",
 				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libwebp/**";
+				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
 				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
