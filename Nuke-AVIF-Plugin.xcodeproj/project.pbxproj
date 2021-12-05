@@ -252,7 +252,7 @@
 			isa = PBXGroup;
 			children = (
 				F8AD60DE2097198B00D056B2 /* Extensions */,
-				F8FAA783200EF84600DD0BED /* WebP */,
+				F8FAA783200EF84600DD0BED /* AVIF */,
 				F8146582200EE4D700364146 /* AVIFImage.swift */,
 			);
 			path = Source;
@@ -313,14 +313,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		F8FAA783200EF84600DD0BED /* WebP */ = {
+		F8FAA783200EF84600DD0BED /* AVIF */ = {
 			isa = PBXGroup;
 			children = (
 				F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */,
 				F8AD60DA209716AB00D056B2 /* AVIFDataDecoder.h */,
 				F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */,
 			);
-			path = WebP;
+			path = AVIF;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

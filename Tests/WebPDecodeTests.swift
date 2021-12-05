@@ -1,20 +1,20 @@
 //
-//  WebPDecodeTests.swift
-//  Nuke-WebP-PluginTests iOS
+//  AVIFDecodeTests.swift
+//  Nuke-AVIF-PluginTests iOS
 //
-//  Created by nagisa-kosuge on 2018/01/25.
-//  Copyright © 2018年 RyoKosuge. All rights reserved.
+//  Created by delneg on 2021/12/05.
+//  Copyright © 2021 delneg. All rights reserved.
 //
 
 import XCTest
 import Nuke
-@testable import NukeWebPPlugin
+@testable import NukeAVIFPlugin
 
-class WebPDecodeTests: XCTestCase {
+class AVIFDecodeTests: XCTestCase {
 
-    private lazy var webpImagePath: URL = {
-        let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
-        return webpImagePath
+    private lazy var avifImagePath: URL = {
+        let avifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "avif")!
+        return avifImagePath
     }()
     
     private lazy var gifImagePath: URL = {
@@ -32,29 +32,29 @@ class WebPDecodeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testsDecodeWebPImage() {
-        let webpData = try! Data(contentsOf: self.webpImagePath)
-        let image: UIImage? = UIImage(data: webpData)
+    func testsDecodeAVIFImage() {
+        let avifData = try! Data(contentsOf: self.avifImagePath)
+        let image: UIImage? = UIImage(data: avifData)
         XCTAssertNil(image)
         
-        let decoder = NukeWebPPlugin.WebPDataDecoder();
-        let webpImage: UIImage? = decoder.decode(webpData)
-        XCTAssertNotNil(webpImage)
+        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
+        let avifImage: UIImage? = decoder.decode(avifData)
+        XCTAssertNotNil(avifImage)
     }
 
-    func testsDecodeNotWebPImage() {
+    func testsDecodeNotAVIFImage() {
         let gifData = try! Data(contentsOf: self.gifImagePath)
         let image: UIImage? = UIImage(data: gifData)
         XCTAssertNotNil(image)
 
-        let decoder = NukeWebPPlugin.WebPDataDecoder();
+        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
         let webpImage: UIImage? = decoder.decode(gifData)
         XCTAssertNil(webpImage)
     }
 
-    func testsProgressiveDecodeWebPImage() {
+    func testsProgressiveDecodeAVIFImage() {
         let webpData = try! Data(contentsOf: self.webpImagePath)
-        let decoder = NukeWebPPlugin.WebPDataDecoder();
+        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
         // no image
         XCTAssertNil(decoder.incrementallyDecode(webpData[0...500]))
 
@@ -70,7 +70,7 @@ class WebPDecodeTests: XCTestCase {
         XCTAssertEqual(scan2!.size.height, 235)
     }
 
-    func testPerformanceDecodeWebP() {
+    func testPerformanceDecodeAVIF() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
@@ -78,7 +78,7 @@ class WebPDecodeTests: XCTestCase {
             let image: UIImage? = UIImage(data: webpData)
             XCTAssertNil(image)
 
-            let decoder = NukeWebPPlugin.WebPDataDecoder();
+            let decoder = NukeAVIFPlugin.AVIFDataDecoder();
             let webpImage: UIImage? = decoder.decode(webpData)
             XCTAssertNotNil(webpImage)
         }

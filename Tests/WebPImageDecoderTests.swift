@@ -1,6 +1,6 @@
 //
-//  WebPImageDecoderTests.swift
-//  Nuke-WebP-Plugin
+//  AVIFImageDecoderTests.swift
+//  Nuke-AVIF-Plugin
 //
 //  Created by nagisa-kosuge on 2018/05/08.
 //  Copyright © 2018年 RyoKosuge. All rights reserved.
@@ -8,16 +8,16 @@
 
 import XCTest
 import Nuke
-@testable import NukeWebPPlugin
+@testable import NukeAVIFPlugin
 
-class WebPImageDecoderTests: XCTestCase {
+class AVIFImageDecoderTests: XCTestCase {
 
-    private lazy var webpImagePath: URL = {
-        let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
-        return webpImagePath
+    private lazy var avifImagePath: URL = {
+        let avifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "avif")!
+        return avifImagePath
     }()
 
-    private lazy var webpImageURL: URL = URL(string: "https://www.gstatic.com/webp/gallery/1.sm.webp")!
+    private lazy var avifImageURL: URL = URL(string: "https://resources.link-u.co.jp/avif/red-at-12-oclock-with-color-profile-10bpc.avif")!
     
     override func setUp() {
         super.setUp()
@@ -29,28 +29,28 @@ class WebPImageDecoderTests: XCTestCase {
         super.tearDown()
     }
 
-    func testsProgressiveDecodeWebPImageDecoder() {
-        let webpData = try! Data(contentsOf: self.webpImagePath)
-        let decoder = NukeWebPPlugin.WebPImageDecoder()
+    func testsProgressiveDecodeAVIFImageDecoder() {
+        let avifData = try! Data(contentsOf: self.avifImagePath)
+        let decoder = NukeAVIFPlugin.AVIFImageDecoder()
         
         // no image
-        XCTAssertNil(decoder.decode(webpData[0...500]))
+        XCTAssertNil(decoder.decode(avifData[0...500]))
         
         // created image
-        let scan1 = decoder.decode(webpData[0...3702])
+        let scan1 = decoder.decode(avifData[0...3702])
         XCTAssertNil(scan1)
 
-        let scan2 = decoder.decode(webpData)
+        let scan2 = decoder.decode(avifData)
         XCTAssertNotNil(scan2)
         XCTAssertEqual(scan2!.image.size.width, 320)
         XCTAssertEqual(scan2!.image.size.height, 235)
     }
 
     func testsImageDecoderRegistryRegistered() {
-        let exception = XCTestExpectation(description: "decode webp image")
+        let exception = XCTestExpectation(description: "decode avif image")
         Nuke.DataLoader.sharedUrlCache.removeAllCachedResponses()
-        WebPImageDecoder.enable()
-        Nuke.ImagePipeline.shared.loadImage(with: self.webpImageURL, progress: nil) { (result) in
+        AVIFImageDecoder.enable()
+        Nuke.ImagePipeline.shared.loadImage(with: self.avifImageURL, progress: nil) { (result) in
             switch result {
             case .success(let imageResponse):
                 XCTAssertNotNil(imageResponse.image)

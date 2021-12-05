@@ -1,20 +1,20 @@
 //
-//  WebPDecodeTests_MacOS.swift
-//  Nuke-WebP-PluginTests macOS
+//  AVIFDecodeTests_MacOS.swift
+//  Nuke-AVIF-PluginTests macOS
 //
-//  Created by nagisa-kosuge on 2018/05/02.
-//  Copyright © 2018年 RyoKosuge. All rights reserved.
+//  Created by delneg on 2021/12/05.
+//  Copyright © 2021 delneg. All rights reserved.
 //
 
 import XCTest
 import Nuke
-@testable import NukeWebPPlugin
+@testable import NukeAVIFPlugin
 
-class WebPDecodeTests: XCTestCase {
+class AVIFDecodeTests: XCTestCase {
     
-    private lazy var webpImagePath: URL = {
-        let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
-        return webpImagePath
+    private lazy var avifImagePath: URL = {
+        let avifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "avif")!
+        return avifImagePath
     }()
     
     private lazy var gifImagePath: URL = {
@@ -32,55 +32,55 @@ class WebPDecodeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testsDecodeWebPImage() {
-        let webpData = try! Data(contentsOf: self.webpImagePath)
-        let image: NSImage? = NSImage(data: webpData)
+    func testsDecodeAVIFImage() {
+        let avifData = try! Data(contentsOf: self.avifImagePath)
+        let image: NSImage? = NSImage(data: avifData)
         XCTAssertNil(image)
 
-        let decoder = NukeWebPPlugin.WebPDataDecoder();
-        let webpImage: NSImage? = decoder.decode(webpData)
-        XCTAssertNotNil(webpImage)
+        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
+        let avifImage: NSImage? = decoder.decode(avifData)
+        XCTAssertNotNil(avifImage)
     }
     
-    func testsDecodeNotWebPImage() {
+    func testsDecodeNotAVIFImage() {
         let gifData = try! Data(contentsOf: self.gifImagePath)
         let image: NSImage? = NSImage(data: gifData)
         XCTAssertNotNil(image)
 
-        let decoder = NukeWebPPlugin.WebPDataDecoder();
-        let webpImage: NSImage? = decoder.decode(gifData)
-        XCTAssertNil(webpImage)
+        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
+        let avifImage: NSImage? = decoder.decode(gifData)
+        XCTAssertNil(avifImage)
     }
     
-    func testsProgressiveDecodeWebPImage() {
-        let webpData = try! Data(contentsOf: self.webpImagePath)
-        let decoder = NukeWebPPlugin.WebPDataDecoder();
+    func testsProgressiveDecodeAVIFImage() {
+        let avifData = try! Data(contentsOf: self.avifImagePath)
+        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
         // no image
-        XCTAssertNil(decoder.incrementallyDecode(webpData[0...500]))
+        XCTAssertNil(decoder.incrementallyDecode(avifData[0...500]))
 
         // created image
-        let scan1 = decoder.incrementallyDecode(webpData[0...3702])
+        let scan1 = decoder.incrementallyDecode(avifData[0...3702])
         XCTAssertNotNil(scan1)
         XCTAssertEqual(scan1!.size.width, 320)
         XCTAssertEqual(scan1!.size.height, 235)
 
-        let scan2 = decoder.incrementallyDecode(webpData)
+        let scan2 = decoder.incrementallyDecode(avifData)
         XCTAssertNotNil(scan2)
         XCTAssertEqual(scan2!.size.width, 320)
         XCTAssertEqual(scan2!.size.height, 235)
     }
 
-    func testPerformanceDecodeWebP() {
+    func testPerformanceDecodeAVIF() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
-            let webpData = try! Data(contentsOf: self.webpImagePath)
-            let image: NSImage? = NSImage(data: webpData)
+            let avifData = try! Data(contentsOf: self.avifImagePath)
+            let image: NSImage? = NSImage(data: avifData)
             XCTAssertNil(image)
 
-            let decoder = NukeWebPPlugin.WebPDataDecoder();
-            let webpImage: NSImage? = decoder.decode(webpData)
-            XCTAssertNotNil(webpImage)
+            let decoder = NukeAVIFPlugin.AVIFDataDecoder();
+            let avifImage: NSImage? = decoder.decode(avifData)
+            XCTAssertNotNil(avifImage)
         }
     }
     
