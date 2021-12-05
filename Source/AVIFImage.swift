@@ -1,6 +1,6 @@
 //
-//  WebPImage.swift
-//  Nuke-WebP-Plugin
+//  AVIFImage.swift
+//  Nuke-AVIF-Plugin
 //
 //  Created by delneg on 2021/12/05.
 //  Copyright © 2021 delneg. All rights reserved.
@@ -9,49 +9,49 @@
 import Foundation
 import Nuke
 #if SWIFT_PACKAGE
-import NukeWebPPluginC
+import NukeAVIFPluginC
 #endif
 
-public class WebPImageDecoder: Nuke.ImageDecoding {
+public class AVIFImageDecoder: Nuke.ImageDecoding {
 
-    private lazy var decoder: WebPDataDecoder = WebPDataDecoder()
+    private lazy var decoder: AVIFDataDecoder = AVIFDataDecoder()
 
     public init() {
     }
 
     public func decode(_ data: Data) -> ImageContainer? {
-        guard data.isWebPFormat else { return nil }
+        guard data.isAVIFFormat else { return nil }
         guard let image = _decode(data) else { return nil }
         return ImageContainer(image: image)
     }
 
     public func decodePartiallyDownloadedData(_ data: Data) -> ImageContainer? {
-        guard data.isWebPFormat else { return nil }
+        guard data.isAVIFFormat else { return nil }
         guard let image = decoder.incrementallyDecode(data) else { return nil }
         return ImageContainer(image: image)
     }
 
 }
 
-// MARK: - check webp format data.
-extension WebPImageDecoder {
+// MARK: - check avif format data.
+extension AVIFImageDecoder {
 
     public static func enable() {
         Nuke.ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
-            WebPImageDecoder.enable(context: context)
+            AVIFImageDecoder.enable(context: context)
         }
     }
 
     public static func enable(context: Nuke.ImageDecodingContext) -> Nuke.ImageDecoding? {
-        return context.data.isWebPFormat ? WebPImageDecoder() : nil
+        return context.data.isAVIFFormat ? AVIFImageDecoder() : nil
     }
 
 }
 
 // MARK: - private
-private let _queue = DispatchQueue(label: "com.github.ryokosuge.Nuke-WebP-Plugin.DataDecoder")
+private let _queue = DispatchQueue(label: "com.github.delneg.Nuke-AVIF-Plugin.DataDecoder")
 
-extension WebPImageDecoder {
+extension AVIFImageDecoder {
 
     private func _decode(_ data: Data) -> PlatformImage? {
         return _queue.sync {

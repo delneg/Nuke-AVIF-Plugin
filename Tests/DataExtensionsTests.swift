@@ -1,9 +1,9 @@
 //
 //  DataExtensionsTests.swift
-//  Nuke-WebP-Plugin
+//  Nuke-AVIF-Plugin
 //
-//  Created by nagisa-kosuge on 2018/05/08.
-//  Copyright © 2018年 RyoKosuge. All rights reserved.
+//  Created by delneg on 2021/12/05.
+//  Copyright © 2021 delneg. All rights reserved.
 //
 
 import XCTest
@@ -11,14 +11,19 @@ import XCTest
 
 class DataExtensionsTests: XCTestCase {
 
-    private lazy var webpImagePath: URL = {
-        let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
-        return webpImagePath
+    private lazy var avifImagePath: URL = {
+        let avifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "avif")!
+        return avifImagePath
     }()
     
     private lazy var gifImagePath: URL = {
         let gifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "gif")!
         return gifImagePath
+    }()
+
+    private lazy var webpImagePath: URL = {
+        let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
+        return webpImagePath
     }()
     
     override func setUp() {
@@ -31,17 +36,20 @@ class DataExtensionsTests: XCTestCase {
         super.tearDown()
     }
 
-    func testsDataIsWebPFormat() {
-        let webpData = try! Data(contentsOf: self.webpImagePath)
-        XCTAssertTrue(webpData.isWebPFormat)
+    func testsDataIsAVIFFormat() {
+        let avifData = try! Data(contentsOf: self.avifImagePath)
+        XCTAssertTrue(avifData.isAVIFFormat)
 
         let gifData = try! Data(contentsOf: self.gifImagePath)
-        XCTAssertFalse(gifData.isWebPFormat)
+        XCTAssertFalse(gifData.isAVIFFormat)
+
+        let webpData = try! Data(contentsOf: self.webpImagePath)
+        XCTAssertFalse(webpData.isAVIFFormat)
     }
 
     func testsNoData() {
         let data = Data(count: 0)
-        XCTAssertFalse(data.isWebPFormat)
+        XCTAssertFalse(data.isAVIFFormat)
     }
 
 }

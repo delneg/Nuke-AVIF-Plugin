@@ -1,12 +1,12 @@
 //
-//  WebPDataDecoder.m
-//  Nuke-WebP-Plugin iOS
+//  AVIFDataDecoder.m
+//  Nuke-AVIF-Plugin iOS
 //
-//  Created by ryokosuge on 2018/04/30.
-//  Copyright © 2018年 RyoKosuge. All rights reserved.
+//  Created by delneg on 2021/12/05.
+//  Copyright © 2021 delneg. All rights reserved.
 //
 
-#import "WebPDataDecoder.h"
+#import "AVIFDataDecoder.h"
 #import "webp/decode.h"
 
 void free_image_data(void *info, const void *data, size_t size) {
@@ -18,8 +18,8 @@ void free_image_data(void *info, const void *data, size_t size) {
     WebPFree((void *)data);
 }
 
-@implementation WebPDataDecoder {
-    WebPIDecoder *_idec;
+@implementation AVIFDataDecoder {
+    AVIFIDecoder *_idec;
 }
 
 - (void)dealloc {

@@ -1,14 +1,14 @@
 //
-//  WebPDataDecoder.h
+//  AVIFDataDecoder.h
 //  Nuke-AVIF-Plugin iOS
 //
 //  Created by delneg on 2021/12/05.
 //  Copyright © 2021 delneg. All rights reserved.
 //
 
-#import "WebPImageMacros.h"
+#import "AVIFImageMacros.h"
 
-#if WEBP_PLUGIN_MAC
+#if AVIF_PLUGIN_MAC
 #import <AppKit/AppKit.h>
 #define Image   NSImage
 #else
@@ -16,7 +16,7 @@
 #define Image   UIImage
 #endif
 
-@interface WebPDataDecoder : NSObject
+@interface AVIFDataDecoder : NSObject
 
 - (nullable Image *)incrementallyDecodeData:(nonnull NSData *)data;
 - (nullable Image *)decodeData:(nonnull NSData *)data;
