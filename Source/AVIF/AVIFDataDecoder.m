@@ -7,7 +7,8 @@
 //
 
 #import "AVIFDataDecoder.h"
-#import <libavif/libavif.h>
+#import <Foundation/Foundation.h>
+#import <../libavif/include/avif/avif.h>
 
 //void free_image_data(void *info, const void *data, size_t size) {
 //    if (info != NULL) {
@@ -152,11 +153,11 @@
 //                                        renderingIntent);
     Image *image = nil;
 
-#if WEBP_PLUGIN_MAC
-    image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
-#else
-    image = [UIImage imageWithCGImage:imageRef];
-#endif
+//#if AVIF_PLUGIN_MAC
+//    image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
+//#else
+//    image = [UIImage imageWithCGImage:imageRef];
+//#endif
 
 //    CGImageRelease(imageRef);
 //    CGColorSpaceRelease(colorSpaceRef);

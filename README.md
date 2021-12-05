@@ -1,24 +1,24 @@
-# Nuke-WebP-Plugin
+# Nuke-AVIF-Plugin
 
-![Test or Build](https://github.com/ryokosuge/Nuke-WebP-Plugin/workflows/Test%20or%20Build/badge.svg)
-![Version](https://img.shields.io/cocoapods/v/Nuke-WebP-Plugin.svg?label=version)
-![Supoprts](https://img.shields.io/badge/supports-CocoaPods%20%7C%20Carthage-green.svg)
-![Platform](https://img.shields.io/badge/platforms-iOS%20%7C%20macOS%20%7C%20tvOS%20%7C%20watchOS-lightgrey.svg)
 
-WebP for Nuke that allows you to load and display WebP image. You can see it for yourself in a demo, included in the project.
+A plugin for Nuke to display AVIF images.
+
+
+Based on https://github.com/ryokosuge/Nuke-WebP-Plugin
+
 
 ## Usage
 
-The plugin features a pre-configured Nuke.Manager with WebP support, and an WebPImage:
+The plugin features a pre-configured Nuke.Manager with AVIF support, and an AVIFImage:
 
 ```swift
 import Nuke
-import NukeWebPPlugin
+import NukeAVIFPlugin
 
-WebPImageDecoder.enable()
+AVIFImageDecoder.enable()
 
 let imageView = UIImageView()
-let webpimageURL = URL(string: "https://example.com/sample.webp")!
+let avifimageURL = URL(string: "https://example.com/sample.avif")!
 Nuke.loadImage(with: url, into: imageView)
 ```
 
@@ -27,13 +27,13 @@ Nuke.loadImage(with: url, into: imageView)
 ### [CocoaPods](https://cocoapods.org/)
 
 ```ruby
-pod 'Nuke-WebP-Plugin'
+pod 'Nuke-AVIF-Plugin'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
 
 ```ruby
-github 'ryokosuge/Nuke-WebP-Plugin'
+github 'delneg/Nuke-AVIF-Plugin'
 ```
 
 ## Minimum Requirements
@@ -44,14 +44,11 @@ github 'ryokosuge/Nuke-WebP-Plugin'
 
 ## Dependencies
 
-| [Nuke](https://github.com/kean/Nuke) | [libwebp](https://chromium.googlesource.com/webm/libwebp) |
-|:---:|:---:|
-| >= 9.0 | v1.0.0 |
+| [Nuke](https://github.com/kean/Nuke) | [libavif](https://github.com/delneg/libavif-XCode) |
+|:------------------------------------:|:--------------------------------------------------:|
+|                >= 9.0                |                       v0.9.2                       |
 
-## Author
-
-ryokosuge, ryo.kosuge@gmail.com
 
 ## License
 
-Nuke-WebP-Plugin is available under the MIT license. See the LICENSE file for more info.
+Nuke-AVIF-Plugin is available under the MIT license. See the LICENSE file for more info.
