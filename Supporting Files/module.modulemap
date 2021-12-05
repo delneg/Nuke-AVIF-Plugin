@@ -1,5 +1,5 @@
-framework module NukeWebPPlugin {
-    umbrella header "Nuke_WebP_Plugin.h"
+framework module NukeAVIFPlugin {
+    umbrella header "Nuke_AVIF_Plugin.h"
 
     export *
     module * { export * }

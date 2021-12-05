@@ -2,8 +2,8 @@
 //  WebPImage.swift
 //  Nuke-WebP-Plugin
 //
-//  Created by ryokosuge on 2018/01/17.
-//  Copyright © 2018年 RyoKosuge. All rights reserved.
+//  Created by delneg on 2021/12/05.
+//  Copyright © 2021 delneg. All rights reserved.
 //
 
 import Foundation

@@ -9,25 +9,25 @@ jobs:
   test-or-build:
     strategy:
       matrix:
-        scheme: ["Nuke-WebP-Plugin iOS", "Nuke-WebP-Plugin macOS", "Nuke-WebP-Plugin tvOS", "Nuke-WebP-Plugin watchOS"]
+        scheme: ["Nuke-AVIF-Plugin iOS", "Nuke-AVIF-Plugin macOS", "Nuke-AVIF-Plugin tvOS", "Nuke-AVIF-Plugin watchOS"]
         xcode-version: [11.5]
         include:
-          - scheme: Nuke-WebP-Plugin iOS
+          - scheme: Nuke-AVIF-Plugin iOS
             platform: iOS
             xcode-version: 11.5
             destination: platform=iOS Simulator,OS=13.5,name=iPhone 11
             command: test
-          - scheme: Nuke-WebP-Plugin macOS
+          - scheme: Nuke-AVIF-Plugin macOS
             platform: Mac
             xcode-version: 11.5
             destination: arch=x86_64
             command: test
-          - scheme: Nuke-WebP-Plugin tvOS
+          - scheme: Nuke-AVIF-Plugin tvOS
             platform: tvOS
             xcode-version: 11.5
             destination: platform=tvOS Simulator,OS=13.4,name=Apple TV 4K
             command: test
-          - scheme: Nuke-WebP-Plugin watchOS
+          - scheme: Nuke-AVIF-Plugin watchOS
             platform: watchOS
             xcode-version: 11.5
             destination: platform=watchOS Simulator,OS=6.2.1,name=Apple Watch Series 5 - 44mm

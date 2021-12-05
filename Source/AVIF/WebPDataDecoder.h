@@ -1,9 +1,9 @@
 //
 //  WebPDataDecoder.h
-//  Nuke-WebP-Plugin iOS
+//  Nuke-AVIF-Plugin iOS
 //
-//  Created by ryokosuge on 2018/04/30.
-//  Copyright © 2018年 RyoKosuge. All rights reserved.
+//  Created by delneg on 2021/12/05.
+//  Copyright © 2021 delneg. All rights reserved.
 //
 
 #import "WebPImageMacros.h"

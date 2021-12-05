@@ -15,11 +15,11 @@ Pod::Spec.new do |s|
   #  summary should be tweet-length, and the description more in depth.
   #
 
-  s.name                = "Nuke-WebP-Plugin"
-  s.version             = "6.0.1"
-  s.summary             = "Nuke's WebP plugin which can load and display WebP"
+  s.name                = "Nuke-AVIF-Plugin"
+  s.version             = "1.0.0"
+  s.summary             = "Nuke's AVIF plugin which can load and display AVIF"
 
-  s.homepage            = "https://github.com/ryokosuge/Nuke-WebP-Plugin"
+  s.homepage            = "https://github.com/delneg/Nuke-AVIF-Plugin"
 
   # ―――  Spec License  ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -40,8 +40,7 @@ Pod::Spec.new do |s|
   #  profile URL.
   #
 
-  s.author              = { "ryokosuge" => "ryo.kosuge@gmail.com" }
-  s.social_media_url    = 'https://twitter.com/ryo_kosuge'
+  s.author              = { "delneg" => "delneg@yandex.ru" }
 
   # ――― Platform Specifics ――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -62,7 +61,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source              = { :git => "https://github.com/ryokosuge/Nuke-WebP-Plugin.git", :tag => "v#{s.version}" }
+  s.source              = { :git => "https://github.com/delneg/Nuke-AVIF-Plugin.git", :tag => "v#{s.version}" }
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
@@ -109,9 +108,9 @@ Pod::Spec.new do |s|
 
   s.swift_version     = ['5.1', '5.2']
   s.requires_arc      = true
-  s.module_name       = 'NukeWebPPlugin'
+  s.module_name       = 'NukeAVIFPlugin'
 
-  s.dependency 'libwebp', '1.1.0'
+  s.dependency 'libavif', '0.9.3'
   s.dependency 'Nuke', '~> 9.0'
   s.xcconfig          = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libwebp/src' }
 

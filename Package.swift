@@ -2,36 +2,36 @@
 import PackageDescription
 
 let package = Package(
-    name: "Nuke-WebP-Plugin",
+    name: "Nuke-AVIF-Plugin",
     platforms: [
         .iOS(.v13),
         .macOS(.v10_13),
         ],
     products: [
-        .library(name: "NukeWebPPlugin", targets: ["NukeWebPPlugin"]),
+        .library(name: "NukeAVIFPlugin", targets: ["NukeAVIFPlugin"]),
     ],
     dependencies: [
         .package(url: "https://github.com/kean/Nuke.git", .upToNextMajor(from: "9.2.3")),
     ],
     targets: [
         .target(
-            name: "NukeWebPPlugin",
+            name: "NukeAVIFPlugin",
             dependencies: [
-                "NukeWebPPluginC",
+                "NukeAVIFPluginC",
                 .product(name: "Nuke", package: "Nuke"),
                 ],
             path: "Source",
             exclude: [
-                "libwebp",
-                "WebP",
+                "libavif",
+                "AVIF",
             ],
             sources: [
-                "WebPImage.swift",
+                "AVIFImage.swift",
                 "Extensions",
             ]
         ),
         .target(
-            name: "NukeWebPPluginC",
+            name: "NukeAVIFPluginC",
             path: "Source",
             exclude: [
                 "WebPImage.swift",

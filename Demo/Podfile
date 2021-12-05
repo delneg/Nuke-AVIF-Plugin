@@ -3,6 +3,6 @@ use_frameworks!
 
 platform :ios, '11.0'
 
-target 'Nuke-WebP-Demo' do
-  pod 'Nuke-WebP-Plugin', :path => '../'
+target 'Nuke-AVIF-Demo' do
+  pod 'Nuke-AVIF-Plugin', :path => '../'
 end

@@ -1,2 +1,2 @@
 github "kean/Nuke" ~> 9.0
-git "https://chromium.googlesource.com/webm/libwebp" "v1.1.0"
+git "https://github.com/AOMediaCodec/libavif" "v0.9.3"
