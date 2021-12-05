@@ -110,8 +110,8 @@ Pod::Spec.new do |s|
   s.requires_arc      = true
   s.module_name       = 'NukeAVIFPlugin'
 
-  s.dependency 'libavif', '0.9.3'
+  s.dependency 'libavif/librav1e', '0.9.3'
   s.dependency 'Nuke', '~> 9.0'
-  s.xcconfig          = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libavif/include/avif' }
+#   s.xcconfig          = { 'USER_HEADER_SEARCH_PATHS' => '$(inherited) $(SRCROOT)/libavif/include/avif' }
 
 end
