@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		651E2CBD276629A100046677 /* AVIFDecodeTests_MacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457612766207D008C29A1 /* AVIFDecodeTests_MacOS.swift */; };
+		651E2CBE276629A700046677 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457632766207D008C29A1 /* DataExtensionsTests.swift */; };
+		651E2CC0276629B600046677 /* NukeAVIFPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4574927661F7A008C29A1 /* NukeAVIFPlugin.framework */; };
+		651E2CC127662A3300046677 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457652766207D008C29A1 /* sample.gif */; };
+		651E2CC227662A3300046677 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = 65E457662766207D008C29A1 /* sample.webp */; };
+		651E2CC327662A3300046677 /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457672766207D008C29A1 /* sample.avif */; };
+		651E2CC427662A3A00046677 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457652766207D008C29A1 /* sample.gif */; };
+		651E2CC527662A3A00046677 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = 65E457662766207D008C29A1 /* sample.webp */; };
+		651E2CC627662A3A00046677 /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457672766207D008C29A1 /* sample.avif */; };
 		65484F192766254D00905C05 /* libavif in Frameworks */ = {isa = PBXBuildFile; productRef = 65484F182766254D00905C05 /* libavif */; };
 		65484F1C2766257A00905C05 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 65484F1B2766257A00905C05 /* Nuke */; };
 		65484F222766269A00905C05 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 65484F202766269A00905C05 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -20,12 +29,18 @@
 		65E4576F2766207D008C29A1 /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457672766207D008C29A1 /* sample.avif */; };
 		65E4577C2766217A008C29A1 /* NukeAVIFPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4574927661F7A008C29A1 /* NukeAVIFPlugin.framework */; };
 		65E4578227662187008C29A1 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457682766207D008C29A1 /* AVIFImageDecoderTests.swift */; };
-		65E4578327662187008C29A1 /* AVIFDecodeTests_MacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457612766207D008C29A1 /* AVIFDecodeTests_MacOS.swift */; };
 		65E4578427662187008C29A1 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457632766207D008C29A1 /* DataExtensionsTests.swift */; };
 		65E4578527662187008C29A1 /* AVIFDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457622766207D008C29A1 /* AVIFDecodeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		651E2CBB2766299C00046677 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 65E4574027661F7A008C29A1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 65E4574827661F7A008C29A1;
+			remoteInfo = "Nuke-AVIF-Plugin";
+		};
 		65E4577D2766217A008C29A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 65E4574027661F7A008C29A1 /* Project object */;
@@ -36,6 +51,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		651E2CB42766299400046677 /* Nuke_AVIF_PluginTestsMacOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nuke_AVIF_PluginTestsMacOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		65484F1E2766269A00905C05 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		65484F1F2766269A00905C05 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65484F202766269A00905C05 /* Nuke_AVIF_Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nuke_AVIF_Plugin.h; sourceTree = "<group>"; };
@@ -57,6 +73,14 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		651E2CB12766299400046677 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651E2CC0276629B600046677 /* NukeAVIFPlugin.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65E4574627661F7A008C29A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -77,6 +101,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		651E2CBF276629B600046677 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		65484F1D2766269A00905C05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -94,6 +125,7 @@
 				65E457532766206D008C29A1 /* Source */,
 				65E457792766217A008C29A1 /* Nuke_AVIF_PluginTests */,
 				65E4574A27661F7A008C29A1 /* Products */,
+				651E2CBF276629B600046677 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,6 +134,7 @@
 			children = (
 				65E4574927661F7A008C29A1 /* NukeAVIFPlugin.framework */,
 				65E457782766217A008C29A1 /* Nuke_AVIF_PluginTests.xctest */,
+				651E2CB42766299400046677 /* Nuke_AVIF_PluginTestsMacOS.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -173,6 +206,24 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		651E2CB32766299400046677 /* Nuke_AVIF_PluginTestsMacOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 651E2CB82766299400046677 /* Build configuration list for PBXNativeTarget "Nuke_AVIF_PluginTestsMacOS" */;
+			buildPhases = (
+				651E2CB02766299400046677 /* Sources */,
+				651E2CB12766299400046677 /* Frameworks */,
+				651E2CB22766299400046677 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				651E2CBC2766299C00046677 /* PBXTargetDependency */,
+			);
+			name = Nuke_AVIF_PluginTestsMacOS;
+			productName = Nuke_AVIF_PluginTestsMacOS;
+			productReference = 651E2CB42766299400046677 /* Nuke_AVIF_PluginTestsMacOS.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		65E4574827661F7A008C29A1 /* Nuke-AVIF-Plugin */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 65E4575027661F7A008C29A1 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin" */;
@@ -223,6 +274,9 @@
 				LastSwiftUpdateCheck = 1310;
 				LastUpgradeCheck = 1310;
 				TargetAttributes = {
+					651E2CB32766299400046677 = {
+						CreatedOnToolsVersion = 13.1;
+					};
 					65E4574827661F7A008C29A1 = {
 						CreatedOnToolsVersion = 13.1;
 					};
@@ -250,11 +304,22 @@
 			targets = (
 				65E4574827661F7A008C29A1 /* Nuke-AVIF-Plugin */,
 				65E457772766217A008C29A1 /* Nuke_AVIF_PluginTests */,
+				651E2CB32766299400046677 /* Nuke_AVIF_PluginTestsMacOS */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		651E2CB22766299400046677 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651E2CC127662A3300046677 /* sample.gif in Resources */,
+				651E2CC227662A3300046677 /* sample.webp in Resources */,
+				651E2CC327662A3300046677 /* sample.avif in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65E4574727661F7A008C29A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -269,12 +334,24 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				651E2CC427662A3A00046677 /* sample.gif in Resources */,
+				651E2CC527662A3A00046677 /* sample.webp in Resources */,
+				651E2CC627662A3A00046677 /* sample.avif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		651E2CB02766299400046677 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				651E2CBE276629A700046677 /* DataExtensionsTests.swift in Sources */,
+				651E2CBD276629A100046677 /* AVIFDecodeTests_MacOS.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		65E4574527661F7A008C29A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -289,7 +366,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E4578327662187008C29A1 /* AVIFDecodeTests_MacOS.swift in Sources */,
 				65E4578427662187008C29A1 /* DataExtensionsTests.swift in Sources */,
 				65E4578227662187008C29A1 /* AVIFImageDecoderTests.swift in Sources */,
 				65E4578527662187008C29A1 /* AVIFDecodeTests.swift in Sources */,
@@ -299,6 +375,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		651E2CBC2766299C00046677 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 65E4574827661F7A008C29A1 /* Nuke-AVIF-Plugin */;
+			targetProxy = 651E2CBB2766299C00046677 /* PBXContainerItemProxy */;
+		};
 		65E4577E2766217A008C29A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 65E4574827661F7A008C29A1 /* Nuke-AVIF-Plugin */;
@@ -307,6 +388,50 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		651E2CB92766299400046677 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTestsMacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		651E2CBA2766299400046677 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTestsMacOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		65E4574E27661F7A008C29A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -534,6 +659,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		651E2CB82766299400046677 /* Build configuration list for PBXNativeTarget "Nuke_AVIF_PluginTestsMacOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				651E2CB92766299400046677 /* Debug */,
+				651E2CBA2766299400046677 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		65E4574327661F7A008C29A1 /* Build configuration list for PBXProject "Nuke-AVIF-Plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

@@ -53,7 +53,7 @@ class AVIFDecodeTests: XCTestCase {
     }
 
     func testsProgressiveDecodeAVIFImage() {
-        let webpData = try! Data(contentsOf: self.webpImagePath)
+        let webpData = try! Data(contentsOf: self.avifImagePath)
         let decoder = NukeAVIFPlugin.AVIFDataDecoder();
         // no image
         XCTAssertNil(decoder.incrementallyDecode(webpData[0...500]))
@@ -74,7 +74,7 @@ class AVIFDecodeTests: XCTestCase {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
-            let webpData = try! Data(contentsOf: self.webpImagePath)
+            let webpData = try! Data(contentsOf: self.avifImagePath)
             let image: UIImage? = UIImage(data: webpData)
             XCTAssertNil(image)
 
