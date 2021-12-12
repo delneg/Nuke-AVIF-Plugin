@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		65484F192766254D00905C05 /* libavif in Frameworks */ = {isa = PBXBuildFile; productRef = 65484F182766254D00905C05 /* libavif */; };
+		65484F1C2766257A00905C05 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 65484F1B2766257A00905C05 /* Nuke */; };
+		65484F222766269A00905C05 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 65484F202766269A00905C05 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65E4575B2766206D008C29A1 /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457552766206D008C29A1 /* Data+AVIFFormat.swift */; };
 		65E4575C2766206D008C29A1 /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457562766206D008C29A1 /* AVIFImage.swift */; };
 		65E4575D2766206D008C29A1 /* AVIFDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E457582766206D008C29A1 /* AVIFDataDecoder.m */; };
-		65E4575E2766206D008C29A1 /* AVIFImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E457592766206D008C29A1 /* AVIFImageMacros.h */; };
-		65E4575F2766206D008C29A1 /* AVIFDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E4575A2766206D008C29A1 /* AVIFDataDecoder.h */; };
+		65E4575E2766206D008C29A1 /* AVIFImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E457592766206D008C29A1 /* AVIFImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E4575F2766206D008C29A1 /* AVIFDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E4575A2766206D008C29A1 /* AVIFDataDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		65E4576D2766207D008C29A1 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457652766207D008C29A1 /* sample.gif */; };
 		65E4576E2766207D008C29A1 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = 65E457662766207D008C29A1 /* sample.webp */; };
 		65E4576F2766207D008C29A1 /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457672766207D008C29A1 /* sample.avif */; };
-		65E4577C2766217A008C29A1 /* Nuke_AVIF_Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4574927661F7A008C29A1 /* Nuke_AVIF_Plugin.framework */; };
+		65E4577C2766217A008C29A1 /* NukeAVIFPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4574927661F7A008C29A1 /* NukeAVIFPlugin.framework */; };
 		65E4578227662187008C29A1 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457682766207D008C29A1 /* AVIFImageDecoderTests.swift */; };
 		65E4578327662187008C29A1 /* AVIFDecodeTests_MacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457612766207D008C29A1 /* AVIFDecodeTests_MacOS.swift */; };
 		65E4578427662187008C29A1 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457632766207D008C29A1 /* DataExtensionsTests.swift */; };
@@ -33,7 +36,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65E4574927661F7A008C29A1 /* Nuke_AVIF_Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nuke_AVIF_Plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65484F1E2766269A00905C05 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
+		65484F1F2766269A00905C05 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65484F202766269A00905C05 /* Nuke_AVIF_Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nuke_AVIF_Plugin.h; sourceTree = "<group>"; };
+		65E4574927661F7A008C29A1 /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		65E457552766206D008C29A1 /* Data+AVIFFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+AVIFFormat.swift"; sourceTree = "<group>"; };
 		65E457562766206D008C29A1 /* AVIFImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVIFImage.swift; sourceTree = "<group>"; };
 		65E457582766206D008C29A1 /* AVIFDataDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVIFDataDecoder.m; sourceTree = "<group>"; };
@@ -55,6 +61,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65484F192766254D00905C05 /* libavif in Frameworks */,
+				65484F1C2766257A00905C05 /* Nuke in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -62,16 +70,27 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				65E4577C2766217A008C29A1 /* Nuke_AVIF_Plugin.framework in Frameworks */,
+				65E4577C2766217A008C29A1 /* NukeAVIFPlugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		65484F1D2766269A00905C05 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				65484F1E2766269A00905C05 /* module.modulemap */,
+				65484F1F2766269A00905C05 /* Info.plist */,
+				65484F202766269A00905C05 /* Nuke_AVIF_Plugin.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		65E4573F27661F7A008C29A1 = {
 			isa = PBXGroup;
 			children = (
+				65484F1D2766269A00905C05 /* Supporting Files */,
 				65E457532766206D008C29A1 /* Source */,
 				65E457792766217A008C29A1 /* Nuke_AVIF_PluginTests */,
 				65E4574A27661F7A008C29A1 /* Products */,
@@ -81,7 +100,7 @@
 		65E4574A27661F7A008C29A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				65E4574927661F7A008C29A1 /* Nuke_AVIF_Plugin.framework */,
+				65E4574927661F7A008C29A1 /* NukeAVIFPlugin.framework */,
 				65E457782766217A008C29A1 /* Nuke_AVIF_PluginTests.xctest */,
 			);
 			name = Products;
@@ -145,6 +164,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65484F222766269A00905C05 /* Nuke_AVIF_Plugin.h in Headers */,
 				65E4575F2766206D008C29A1 /* AVIFDataDecoder.h in Headers */,
 				65E4575E2766206D008C29A1 /* AVIFImageMacros.h in Headers */,
 			);
@@ -167,8 +187,12 @@
 			dependencies = (
 			);
 			name = "Nuke-AVIF-Plugin";
+			packageProductDependencies = (
+				65484F182766254D00905C05 /* libavif */,
+				65484F1B2766257A00905C05 /* Nuke */,
+			);
 			productName = "Nuke-AVIF-Plugin";
-			productReference = 65E4574927661F7A008C29A1 /* Nuke_AVIF_Plugin.framework */;
+			productReference = 65E4574927661F7A008C29A1 /* NukeAVIFPlugin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		65E457772766217A008C29A1 /* Nuke_AVIF_PluginTests */ = {
@@ -216,6 +240,10 @@
 				Base,
 			);
 			mainGroup = 65E4573F27661F7A008C29A1;
+			packageReferences = (
+				65484F172766254D00905C05 /* XCRemoteSwiftPackageReference "libavif-Xcode" */,
+				65484F1A2766257A00905C05 /* XCRemoteSwiftPackageReference "Nuke" */,
+			);
 			productRefGroup = 65E4574A27661F7A008C29A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -412,7 +440,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Nuke_AVIF_PluginTests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -421,8 +449,9 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = NukeAVIFPlugin;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -439,7 +468,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "$(SRCROOT)/Nuke_AVIF_PluginTests/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
 				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -448,8 +477,9 @@
 					"@loader_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
+				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = NukeAVIFPlugin;
 				SKIP_INSTALL = YES;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -532,6 +562,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		65484F172766254D00905C05 /* XCRemoteSwiftPackageReference "libavif-Xcode" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SDWebImage/libavif-Xcode";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.1;
+			};
+		};
+		65484F1A2766257A00905C05 /* XCRemoteSwiftPackageReference "Nuke" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kean/Nuke.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 9.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		65484F182766254D00905C05 /* libavif */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65484F172766254D00905C05 /* XCRemoteSwiftPackageReference "libavif-Xcode" */;
+			productName = libavif;
+		};
+		65484F1B2766257A00905C05 /* Nuke */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 65484F1A2766257A00905C05 /* XCRemoteSwiftPackageReference "Nuke" */;
+			productName = Nuke;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 65E4574027661F7A008C29A1 /* Project object */;
 }

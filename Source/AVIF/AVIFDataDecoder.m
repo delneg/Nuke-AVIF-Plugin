@@ -8,7 +8,8 @@
 
 #import "AVIFDataDecoder.h"
 #import <Foundation/Foundation.h>
-#import <../libavif/include/avif/avif.h>
+//#import "libavif"
+//#import <../libavif/include/avif/avif.h>
 
 //void free_image_data(void *info, const void *data, size_t size) {
 //    if (info != NULL) {
