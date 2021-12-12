@@ -19,8 +19,7 @@
 static void FreeImageData(void *info, const void *data, size_t size) {
     free((void *)data);
 }
-
-static CGImageRef CreateImageFromBuffer(avifImage * avif, vImage_Buffer* result) {
+CGImageRef CreateImageFromBuffer(avifImage * avif, vImage_Buffer* result) {
     BOOL monochrome = avif->yuvPlanes[1] == NULL || avif->yuvPlanes[2] == NULL;
     BOOL hasAlpha = avif->alphaPlane != NULL;
     BOOL usesU16 = avifImageUsesU16(avif);

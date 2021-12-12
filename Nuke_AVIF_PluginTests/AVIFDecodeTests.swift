@@ -48,39 +48,39 @@ class AVIFDecodeTests: XCTestCase {
         XCTAssertNotNil(image)
 
         let decoder = NukeAVIFPlugin.AVIFDataDecoder();
-        let webpImage: UIImage? = decoder.decode(gifData)
-        XCTAssertNil(webpImage)
+        let avifImage: UIImage? = decoder.decode(gifData)
+        XCTAssertNil(avifImage)
     }
 
     func testsProgressiveDecodeAVIFImage() {
-        let webpData = try! Data(contentsOf: self.avifImagePath)
+        let avifData = try! Data(contentsOf: self.avifImagePath)
         let decoder = NukeAVIFPlugin.AVIFDataDecoder();
         // no image
-        XCTAssertNil(decoder.incrementallyDecode(webpData[0...500]))
+        XCTAssertNil(decoder.incrementallyDecode(avifData[0...200]))
 
         // created image
-        let scan1 = decoder.incrementallyDecode(webpData[0...3702])
+        let scan1 = decoder.incrementallyDecode(avifData[0...8000])
         XCTAssertNotNil(scan1)
-        XCTAssertEqual(scan1!.size.width, 320)
-        XCTAssertEqual(scan1!.size.height, 235)
+        XCTAssertEqual(scan1!.size.width, 200)
+        XCTAssertEqual(scan1!.size.height, 180)
 
-        let scan2 = decoder.incrementallyDecode(webpData)
+        let scan2 = decoder.incrementallyDecode(avifData)
         XCTAssertNotNil(scan2)
-        XCTAssertEqual(scan2!.size.width, 320)
-        XCTAssertEqual(scan2!.size.height, 235)
+        XCTAssertEqual(scan2!.size.width, 200)
+        XCTAssertEqual(scan2!.size.height, 180)
     }
 
     func testPerformanceDecodeAVIF() {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
-            let webpData = try! Data(contentsOf: self.avifImagePath)
-            let image: UIImage? = UIImage(data: webpData)
+            let avifData = try! Data(contentsOf: self.avifImagePath)
+            let image: UIImage? = UIImage(data: avifData)
             XCTAssertNil(image)
 
             let decoder = NukeAVIFPlugin.AVIFDataDecoder();
-            let webpImage: UIImage? = decoder.decode(webpData)
-            XCTAssertNotNil(webpImage)
+            let avifImage: UIImage? = decoder.decode(avifData)
+            XCTAssertNotNil(avifImage)
         }
     }
     

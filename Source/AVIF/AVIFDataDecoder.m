@@ -13,102 +13,160 @@
 #else
 #import "avif/avif.h"
 #import "SDSources/Conversion.h"
+#import <Accelerate/Accelerate.h>
+
 
 #endif
 
-//void free_image_data(void *info, const void *data, size_t size) {
-//    if (info != NULL) {
-//        WebPFreeDecBuffer(&((WebPDecoderConfig *) info)->output);
-//        free(info);
-//    }
-//
-//    WebPFree((void *)data);
-//}
-
 @implementation AVIFDataDecoder {
-//    AVIFIDecoder *_idec;
+    avifDecoder *_idec;
 }
+
+
+- (void)dealloc {
+    if (_idec) {
+        avifDecoderDestroy(_idec);
+        _idec = NULL;
+    }
+}
+
 - (nullable Image *)incrementallyDecodeData:(NSData *)data {
-    return nil;
+
+    if (!_idec) {
+        _idec = avifDecoderCreate();
+        // Disable strict mode to keep some AVIF image compatible
+        _idec->strictFlags = AVIF_STRICT_DISABLED;
+        if (!_idec) {
+            return nil;
+        }
+        
+    }
+
+    Image *image;
+    CGFloat scale = 1;
+    
+    avifDecoderSetIOMemory(_idec, data.bytes, data.length);
+    avifResult decodeResult = avifDecoderParse(_idec);
+
+    if (decodeResult != AVIF_RESULT_OK && decodeResult != AVIF_RESULT_TRUNCATED_DATA) {
+        NSLog(@"Failed to decode image: %s", avifResultToString(decodeResult));
+        avifDecoderDestroy(_idec);
+        _idec = NULL;
+        return nil;
+    }
+    
+    // Static image
+    if (_idec->imageCount == 1) {
+        avifResult nextImageResult = avifDecoderNextImage(_idec);
+        NSLog(@"nextImageResult %s", avifResultToString(nextImageResult));
+//        if (nextImageResult != AVIF_RESULT_OK ) {
+//            NSLog(@"Failed to decode image: %s", avifResultToString(nextImageResult));
+//            avifDecoderDestroy(_idec);
+//            _idec = NULL;
+//            return nil;
+//        }
+    
+        
+//        avifRGBImage rgb;
+//        memset(&rgb, 0, sizeof(rgb));
+//        // Now available (for this frame):
+//        // * All decoder->image YUV pixel data (yuvFormat, yuvPlanes, yuvRange, yuvChromaSamplePosition, yuvRowBytes)
+//        // * decoder->image alpha data (alphaRange, alphaPlane, alphaRowBytes)
+//        // * this frame's sequence timing
+//
+//        avifRGBImageSetDefaults(&rgb, _idec->image);
+//        // Override YUV(A)->RGB(A) defaults here: depth, format, chromaUpsampling, ignoreAlpha, alphaPremultiplied, libYUVUsage, etc
+//
+//        // Alternative: set rgb.pixels and rgb.rowBytes yourself, which should match your chosen rgb.format
+//        // Be sure to use uint16_t* instead of uint8_t* for rgb.pixels/rgb.rowBytes if (rgb.depth > 8)
+//        avifRGBImageAllocatePixels(&rgb);
+//
+//        // Now available:
+//        // * RGB(A) pixel data (rgb.pixels, rgb.rowBytes)
+//
+//        if (rgb.depth > 8) {
+//            uint16_t * firstPixel = (uint16_t *)rgb.pixels;
+//            printf(" * First pixel: RGBA(%u,%u,%u,%u)\n", firstPixel[0], firstPixel[1], firstPixel[2], firstPixel[3]);
+//        } else {
+//            uint8_t * firstPixel = rgb.pixels;
+//            printf(" * First pixel: RGBA(%u,%u,%u,%u)\n", firstPixel[0], firstPixel[1], firstPixel[2], firstPixel[3]);
+//        }
+        int width = _idec -> image->width;
+        int height = _idec -> image -> height;
+        int last_y = 0;
+        // image properties
+        BOOL const monochrome = _idec->image->yuvPlanes[1] == NULL || _idec->image->yuvPlanes[2] == NULL;
+        BOOL const hasAlpha = _idec->image->alphaPlane != NULL;
+        size_t const components = (monochrome ? 1 : 3) + (hasAlpha ? 1 : 0);
+        size_t const rowBytes = components * sizeof(uint8_t) * width;
+        uint8_t* resultBufferData = calloc(components * rowBytes * height, sizeof(uint8_t));
+        vImage_Buffer resultBuffer = {
+            .data = resultBufferData,
+            .width = width,
+            .height = height,
+            .rowBytes = width * components,
+        };
+//        _idec -> image ->
+//        uint8_t *rgba = avifRgb(_idec, &last_y, &width, &height, &stride);
+    
+        if (0 < width + height) {
+//            size_t rgbaSize = last_y * stride;
+//            CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, rgba, rgbaSize, NULL);
+//            CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
+            CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast;
+//            size_t components = 4;
+//            CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
+//
+//            CGImageRef imageRef = CGImageCreate(width, last_y, 8, components * 8, components * width, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
+//
+            CGImageRef imageRef = CreateImageFromBuffer(_idec->image,&resultBuffer);
+            
+            if (!imageRef) {
+                return nil;
+            }
+    
+            CGColorSpaceRef canvasColorSpaceRef = CGColorSpaceCreateDeviceRGB();
+            CGContextRef canvas = CGBitmapContextCreate(NULL, width, height, 8, 0, canvasColorSpaceRef, bitmapInfo);
+            if (!canvas) {
+                CGImageRelease(imageRef);
+                CGColorSpaceRelease(canvasColorSpaceRef);
+                return nil;
+            }
+    
+            CGContextDrawImage(canvas, CGRectMake(0, height - last_y, width, last_y), imageRef);
+            CGImageRef newImageRef = CGBitmapContextCreateImage(canvas);
+    
+            CGImageRelease(imageRef);
+    
+            if (!newImageRef) {
+                return nil;
+            }
+    
+            CGContextRelease(canvas);
+            CGColorSpaceRelease(canvasColorSpaceRef);
+    
+
+    #if AVIF_PLUGIN_MAC
+            image = [[NSImage alloc] initWithCGImage:newImageRef size:CGSizeZero];
+    #else
+            image = [UIImage imageWithCGImage:newImageRef scale:scale orientation:UIImageOrientationUp];
+    #endif
+            CGImageRelease(newImageRef);
+
+            return image;
+        }
+    } else if (_idec->imageCount < 1){
+        NSLog(@"ImageCount < 1");
+        return nil;
+    } else {
+        NSLog(@"Animated images are not supported yet");
+        avifDecoderDestroy(_idec);
+        _idec = NULL;
+        return image;
+    }
+    return image;
 }
 
-
-//- (void)dealloc {
-//    if (_idec) {
-//        WebPIDelete(_idec);
-//        _idec = NULL;
-//    }
-//}
-//
-//- (Image *)incrementallyDecodeData:(NSData *)data {
-//
-//    if (!_idec) {
-//        _idec = WebPINewRGB(MODE_rgbA, NULL, 0, 0);
-//        if (!_idec) {
-//            return nil;
-//        }
-//    }
-//
-//    Image *image;
-//
-//    VP8StatusCode status = WebPIUpdate(_idec, [data bytes], [data length]);
-//    if (status != VP8_STATUS_OK && status != VP8_STATUS_SUSPENDED) {
-//        return nil;
-//    }
-//
-//    int width, height, last_y, stride = 0;
-//    uint8_t *rgba = WebPIDecGetRGB(_idec, &last_y, &width, &height, &stride);
-//
-//    if (0 < width + height && 0 < last_y && last_y <= height) {
-//        size_t rgbaSize = last_y * stride;
-//        CGDataProviderRef provider = CGDataProviderCreateWithData(NULL, rgba, rgbaSize, NULL);
-//        CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
-//        CGBitmapInfo bitmapInfo = kCGBitmapByteOrder32Big | kCGImageAlphaPremultipliedLast;
-//        size_t components = 4;
-//        CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
-//
-//        CGImageRef imageRef = CGImageCreate(width, last_y, 8, components * 8, components * width, colorSpaceRef, bitmapInfo, provider, NULL, NO, renderingIntent);
-//
-//        if (!imageRef) {
-//            return nil;
-//        }
-//
-//        CGColorSpaceRef canvasColorSpaceRef = CGColorSpaceCreateDeviceRGB();
-//        CGContextRef canvas = CGBitmapContextCreate(NULL, width, height, 8, 0, canvasColorSpaceRef, bitmapInfo);
-//        if (!canvas) {
-//            CGImageRelease(imageRef);
-//            CGColorSpaceRelease(colorSpaceRef);
-//            CGColorSpaceRelease(canvasColorSpaceRef);
-//            CGDataProviderRelease(provider);
-//            return nil;
-//        }
-//
-//        CGContextDrawImage(canvas, CGRectMake(0, height - last_y, width, last_y), imageRef);
-//        CGImageRef newImageRef = CGBitmapContextCreateImage(canvas);
-//
-//        CGImageRelease(imageRef);
-//        CGColorSpaceRelease(colorSpaceRef);
-//
-//        if (!newImageRef) {
-//            CGDataProviderRelease(provider);
-//            return nil;
-//        }
-//
-//        CGContextRelease(canvas);
-//        CGColorSpaceRelease(canvasColorSpaceRef);
-//
-//#if WEBP_PLUGIN_MAC
-//        image = [[NSImage alloc] initWithCGImage:newImageRef size:CGSizeZero];
-//#else
-//        image = [UIImage imageWithCGImage:newImageRef];
-//#endif
-//        CGImageRelease(newImageRef);
-//        CGDataProviderRelease(provider);
-//    }
-//
-//    return image;
-//}
-//
 - (nullable Image *)decodeData:(NSData *)data {
     avifDecoder * decoder = avifDecoderCreate();
     avifDecoderSetIOMemory(decoder, data.bytes, data.length);
