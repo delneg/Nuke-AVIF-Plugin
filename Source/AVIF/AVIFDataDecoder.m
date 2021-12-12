@@ -12,11 +12,10 @@
 #import <libavif/avif.h>
 #else
 #import "avif/avif.h"
+#endif
 #import "SDSources/Conversion.h"
 #import <Accelerate/Accelerate.h>
 
-
-#endif
 
 @implementation AVIFDataDecoder {
     avifDecoder *_idec;

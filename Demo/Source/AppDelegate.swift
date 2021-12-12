@@ -2,13 +2,13 @@
 //  AppDelegate.swift
 //  Demo
 //
-//  Created by ryokosuge on 2018/01/17.
-//  Copyright © 2018年 RyoKosuge. All rights reserved.
+//  Created by delneg on 2021/12/05.
+//  Copyright © 2021 delneg. All rights reserved.
 //
 
 import UIKit
 import Nuke
-import NukeWebPPlugin
+import NukeAVIFPlugin
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,9 +18,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
-        WebPImageDecoder.enable()
+        AVIFImageDecoder.enable()
         let pipline = Nuke.ImagePipeline {
-            $0.isProgressiveDecodingEnabled = true
+            //TODO: fix progressive decoding
+            $0.isProgressiveDecodingEnabled = false
         }
         Nuke.ImagePipeline.shared = pipline
         return true

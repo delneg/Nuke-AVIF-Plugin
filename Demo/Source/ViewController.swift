@@ -2,13 +2,13 @@
 //  ViewController.swift
 //  Demo
 //
-//  Created by ryokosuge on 2018/01/17.
-//  Copyright © 2018年 RyoKosuge. All rights reserved.
+//  Created by delneg on 2021/12/05.
+//  Copyright © 2021 delneg. All rights reserved.
 //
 
 import UIKit
 import Nuke
-import NukeWebPPlugin
+import NukeAVIFPlugin
 
 class ViewController: UIViewController {
 
@@ -18,7 +18,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
 
-        if let url = URL(string: "https://www.gstatic.com/webp/gallery/5.sm.webp"), let imageView = self.imageView {
+        if let url = URL(string: "https://resources.link-u.co.jp/avif/red-at-12-oclock-with-color-profile-10bpc.avif"), let imageView = self.imageView {
             Nuke.loadImage(with: url, into: imageView, progress: {[imageView] (response, total, bytes) in
                 imageView.image = response?.image
             }) { (result) in
