@@ -16,6 +16,10 @@
 		651E2CC427662A3A00046677 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457652766207D008C29A1 /* sample.gif */; };
 		651E2CC527662A3A00046677 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = 65E457662766207D008C29A1 /* sample.webp */; };
 		651E2CC627662A3A00046677 /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457672766207D008C29A1 /* sample.avif */; };
+		651E2CCC2766808600046677 /* ColorSpace.m in Sources */ = {isa = PBXBuildFile; fileRef = 651E2CC82766808600046677 /* ColorSpace.m */; };
+		651E2CCD2766808600046677 /* Conversion.h in Headers */ = {isa = PBXBuildFile; fileRef = 651E2CC92766808600046677 /* Conversion.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		651E2CCE2766808600046677 /* ColorSpace.h in Headers */ = {isa = PBXBuildFile; fileRef = 651E2CCA2766808600046677 /* ColorSpace.h */; settings = {ATTRIBUTES = (Private, ); }; };
+		651E2CCF2766808600046677 /* Conversion.m in Sources */ = {isa = PBXBuildFile; fileRef = 651E2CCB2766808600046677 /* Conversion.m */; };
 		65484F192766254D00905C05 /* libavif in Frameworks */ = {isa = PBXBuildFile; productRef = 65484F182766254D00905C05 /* libavif */; };
 		65484F1C2766257A00905C05 /* Nuke in Frameworks */ = {isa = PBXBuildFile; productRef = 65484F1B2766257A00905C05 /* Nuke */; };
 		65484F222766269A00905C05 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = 65484F202766269A00905C05 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -52,6 +56,10 @@
 
 /* Begin PBXFileReference section */
 		651E2CB42766299400046677 /* Nuke_AVIF_PluginTestsMacOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nuke_AVIF_PluginTestsMacOS.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		651E2CC82766808600046677 /* ColorSpace.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ColorSpace.m; sourceTree = "<group>"; };
+		651E2CC92766808600046677 /* Conversion.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Conversion.h; sourceTree = "<group>"; };
+		651E2CCA2766808600046677 /* ColorSpace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ColorSpace.h; sourceTree = "<group>"; };
+		651E2CCB2766808600046677 /* Conversion.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Conversion.m; sourceTree = "<group>"; };
 		65484F1E2766269A00905C05 /* module.modulemap */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		65484F1F2766269A00905C05 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		65484F202766269A00905C05 /* Nuke_AVIF_Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nuke_AVIF_Plugin.h; sourceTree = "<group>"; };
@@ -108,6 +116,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		651E2CC72766808600046677 /* SDSources */ = {
+			isa = PBXGroup;
+			children = (
+				651E2CC82766808600046677 /* ColorSpace.m */,
+				651E2CC92766808600046677 /* Conversion.h */,
+				651E2CCA2766808600046677 /* ColorSpace.h */,
+				651E2CCB2766808600046677 /* Conversion.m */,
+			);
+			path = SDSources;
+			sourceTree = "<group>";
+		};
 		65484F1D2766269A00905C05 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -160,6 +179,7 @@
 		65E457572766206D008C29A1 /* AVIF */ = {
 			isa = PBXGroup;
 			children = (
+				651E2CC72766808600046677 /* SDSources */,
 				65E457582766206D008C29A1 /* AVIFDataDecoder.m */,
 				65E457592766206D008C29A1 /* AVIFImageMacros.h */,
 				65E4575A2766206D008C29A1 /* AVIFDataDecoder.h */,
@@ -198,7 +218,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65484F222766269A00905C05 /* Nuke_AVIF_Plugin.h in Headers */,
+				651E2CCD2766808600046677 /* Conversion.h in Headers */,
 				65E4575F2766206D008C29A1 /* AVIFDataDecoder.h in Headers */,
+				651E2CCE2766808600046677 /* ColorSpace.h in Headers */,
 				65E4575E2766206D008C29A1 /* AVIFImageMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -357,7 +379,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				65E4575B2766206D008C29A1 /* Data+AVIFFormat.swift in Sources */,
+				651E2CCF2766808600046677 /* Conversion.m in Sources */,
 				65E4575D2766206D008C29A1 /* AVIFDataDecoder.m in Sources */,
+				651E2CCC2766808600046677 /* ColorSpace.m in Sources */,
 				65E4575C2766206D008C29A1 /* AVIFImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

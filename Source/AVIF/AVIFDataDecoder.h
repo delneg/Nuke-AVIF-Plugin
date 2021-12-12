@@ -6,7 +6,7 @@
 //  Copyright © 2021 delneg. All rights reserved.
 //
 
-#import "AVIFImageMacros.h"
+#import <AVIFImageMacros.h>
 
 #if AVIF_PLUGIN_MAC
 #import <AppKit/AppKit.h>

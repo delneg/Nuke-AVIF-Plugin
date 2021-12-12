@@ -8,8 +8,13 @@
 
 #import "AVIFDataDecoder.h"
 #import <Foundation/Foundation.h>
-//#import "libavif"
-//#import <../libavif/include/avif/avif.h>
+#if __has_include(<libavif/avif.h>)
+#import <libavif/avif.h>
+#else
+#import "avif/avif.h"
+#import "SDSources/Conversion.h"
+
+#endif
 
 //void free_image_data(void *info, const void *data, size_t size) {
 //    if (info != NULL) {
@@ -105,66 +110,76 @@
 //}
 //
 - (nullable Image *)decodeData:(NSData *)data {
-//    WebPBitstreamFeatures features;
-//    if (WebPGetFeatures([data bytes], [data length], &features) != VP8_STATUS_OK) {
-//        return nil;
-//    }
-//
-//    int width = 0, height = 0;
-//    uint8_t *webpData = NULL;
-//    int pixelLength = 0;
-//
-//    if (features.has_alpha) {
-//        webpData = WebPDecodeRGBA([data bytes], [data length], &width, &height);
-//        pixelLength = 4;
-//    } else {
-//        webpData = WebPDecodeRGB([data bytes], [data length], &width, &height);
-//        pixelLength = 3;
-//    }
-//
-//    if (!webpData) {
-//        return nil;
-//    }
-//
-//    CGDataProviderRef providerRef = CGDataProviderCreateWithData(NULL,
-//                                                                 webpData,
-//                                                                 width * height * pixelLength,
-//                                                                 free_image_data);
-//
-//    CGColorSpaceRef colorSpaceRef = CGColorSpaceCreateDeviceRGB();
-//
-//    CGBitmapInfo bitmapInfo = kCGBitmapByteOrderDefault;
-//    if (features.has_alpha) {
-//        bitmapInfo |= kCGImageAlphaLast;
-//    } else {
-//        bitmapInfo |= kCGImageAlphaNone;
-//    }
-//
-//    CGColorRenderingIntent renderingIntent = kCGRenderingIntentDefault;
-//    CGImageRef imageRef = CGImageCreate(width,
-//                                        height,
-//                                        8,
-//                                        8 * pixelLength,
-//                                        pixelLength * width,
-//                                        colorSpaceRef,
-//                                        bitmapInfo,
-//                                        providerRef,
-//                                        NULL,
-//                                        NO,
-//                                        renderingIntent);
-    Image *image = nil;
+    avifDecoder * decoder = avifDecoderCreate();
+    avifDecoderSetIOMemory(decoder, data.bytes, data.length);
+    CGFloat scale = 1;
 
+    // Disable strict mode to keep some AVIF image compatible
+    decoder->strictFlags = AVIF_STRICT_DISABLED;
+    avifResult decodeResult = avifDecoderParse(decoder);
+    if (decodeResult != AVIF_RESULT_OK) {
+        NSLog(@"Failed to decode image: %s", avifResultToString(decodeResult));
+        avifDecoderDestroy(decoder);
+        return nil;
+    }
+    // Static image
+    if (decoder->imageCount <= 1) {
+        avifResult nextImageResult = avifDecoderNextImage(decoder);
+        if (nextImageResult != AVIF_RESULT_OK) {
+            NSLog(@"Failed to decode image: %s", avifResultToString(nextImageResult));
+            avifDecoderDestroy(decoder);
+            return nil;
+        }
+        CGImageRef imageRef = SDCreateCGImageFromAVIF(decoder->image);
+        if (!imageRef) {
+            avifDecoderDestroy(decoder);
+            NSLog(@"CGImageRef is nil");
+            return nil;
+        }
+
+        Image *image = nil;
+
+#if AVIF_PLUGIN_MAC
+        image = [[NSImage alloc] initWithCGImage:imageRef size:CGSizeZero];
+#else
+        image = [UIImage imageWithCGImage:imageRef scale:scale orientation:UIImageOrientationUp];
+#endif
+
+        CGImageRelease(imageRef);
+        avifDecoderDestroy(decoder);
+        return image;
+    } else {
+        NSLog(@"Animated images are not supported yet");
+        return nil;
+    }
+
+    // Animated image
+//    NSMutableArray<Image *> *frames = [NSMutableArray array];
+//    while (avifDecoderNextImage(decoder) == AVIF_RESULT_OK) {
+//        @autoreleasepool {
+//            CGImageRef imageRef = SDCreateCGImageFromAVIF(decoder->image);
+//            if (!imageRef) {
+//                continue;
+//            }
+//            Image *image = nil;
 //#if AVIF_PLUGIN_MAC
-//    image = [[NSImage alloc] initWithCGImage: imageRef size: CGSizeZero];
+//            image = [[NSImage alloc] initWithCGImage:imageRef size:CGSizeZero];
 //#else
-//    image = [UIImage imageWithCGImage:imageRef];
+//            image = [UIImage imageWithCGImage:imageRef scale:scale orientation:UIImageOrientationUp];
 //#endif
-
-//    CGImageRelease(imageRef);
-//    CGColorSpaceRelease(colorSpaceRef);
-//    CGDataProviderRelease(providerRef);
-
-    return image;
+//            NSTimeInterval duration = decoder->imageTiming.duration; // Should use `decoder->imageTiming`, not the `decoder->duration`, see libavif source code
+//            SDImageFrame *frame = [SDImageFrame frameWithImage:image duration:duration];
+//            [frames addObject:frame];
+//        }
+//    }
+//
+//    avifDecoderDestroy(decoder);
+//
+//    UIImage *animatedImage = [SDImageCoderHelper animatedImageWithFrames:frames];
+//    animatedImage.sd_imageLoopCount = 0;
+//    animatedImage.sd_imageFormat = SDImageFormatAVIF;
+//
+//    return animatedImage;
 }
 
 @end
