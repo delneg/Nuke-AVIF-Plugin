@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9CEC29ED716AD5DFAAC94884 /* Pods_Nuke_AVIF_Demo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 476E64F26A2B3FBAC6476A83 /* Pods_Nuke_AVIF_Demo.framework */; };
+		03F35CC7BE6D2E01D2B6C320 /* libPods-Nuke-AVIF-Demo.a in Frameworks */ = {isa = PBXBuildFile; fileRef = BA875A93539C3251554D69BD /* libPods-Nuke-AVIF-Demo.a */; };
 		F8F20D17200F4D1300A3E8E1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F20D16200F4D1300A3E8E1 /* AppDelegate.swift */; };
 		F8F20D19200F4D1300A3E8E1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8F20D18200F4D1300A3E8E1 /* ViewController.swift */; };
 		F8F20D1C200F4D1300A3E8E1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F8F20D1A200F4D1300A3E8E1 /* Main.storyboard */; };
@@ -17,8 +17,8 @@
 
 /* Begin PBXFileReference section */
 		09CF65C40DC2F00D52FA182A /* Pods-Nuke-AVIF-Demo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-AVIF-Demo.release.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-AVIF-Demo/Pods-Nuke-AVIF-Demo.release.xcconfig"; sourceTree = "<group>"; };
-		476E64F26A2B3FBAC6476A83 /* Pods_Nuke_AVIF_Demo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Nuke_AVIF_Demo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B6149C693518EBC5D5800B31 /* Pods-Nuke-AVIF-Demo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Nuke-AVIF-Demo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Nuke-AVIF-Demo/Pods-Nuke-AVIF-Demo.debug.xcconfig"; sourceTree = "<group>"; };
+		BA875A93539C3251554D69BD /* libPods-Nuke-AVIF-Demo.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-Nuke-AVIF-Demo.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F20D13200F4D1300A3E8E1 /* Nuke-AVIF-Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Nuke-AVIF-Demo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8F20D16200F4D1300A3E8E1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F8F20D18200F4D1300A3E8E1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -33,7 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9CEC29ED716AD5DFAAC94884 /* Pods_Nuke_AVIF_Demo.framework in Frameworks */,
+				03F35CC7BE6D2E01D2B6C320 /* libPods-Nuke-AVIF-Demo.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -43,7 +43,7 @@
 		1D5E90BD4F574DE85F51DD2B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				476E64F26A2B3FBAC6476A83 /* Pods_Nuke_AVIF_Demo.framework */,
+				BA875A93539C3251554D69BD /* libPods-Nuke-AVIF-Demo.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -99,7 +99,6 @@
 				F8F20D0F200F4D1300A3E8E1 /* Sources */,
 				F8F20D10200F4D1300A3E8E1 /* Frameworks */,
 				F8F20D11200F4D1300A3E8E1 /* Resources */,
-				75926CA0E7DFD7A40B19054B /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -175,28 +174,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		75926CA0E7DFD7A40B19054B /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Nuke-AVIF-Demo/Pods-Nuke-AVIF-Demo-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/Nuke/Nuke.framework",
-				"${BUILT_PRODUCTS_DIR}/Nuke-AVIF-Plugin/NukeAVIFPlugin.framework",
-				"${BUILT_PRODUCTS_DIR}/libwebp/libwebp.framework",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Nuke.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/NukeAVIFPlugin.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/libwebp.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Nuke-AVIF-Demo/Pods-Nuke-AVIF-Demo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */

@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		6547FE5D275CF61A00C70158 /* libavif in Frameworks */ = {isa = PBXBuildFile; productRef = 6547FE5C275CF61A00C70158 /* libavif */; };
 		6547FE5F275CFA9700C70158 /* libavif in Frameworks */ = {isa = PBXBuildFile; productRef = 6547FE5E275CFA9700C70158 /* libavif */; };
-		6547FE60275CFC2500C70158 /* libavif-Xcode in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = 6547FE5A275CF57600C70158 /* libavif-Xcode */; };
 		65FD4DCB275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
 		65FD4DCC275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
 		65FD4DCD275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
@@ -25,14 +24,12 @@
 		F80D7486209FDD810015EA10 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
 		F80D7487209FDD810015EA10 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
 		F80D7490209FDF170015EA10 /* AVIFDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */; };
-		F8138E93209FE0530073DCF5 /* Nuke.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F80D7477209FDBE60015EA10 /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8138E94209FE07E0073DCF5 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D7477209FDBE60015EA10 /* Nuke.framework */; };
 		F814657E200EE40500364146 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		F8146583200EE4D700364146 /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* AVIFImage.swift */; };
 		F8620F722099394000DFCC84 /* NukeAVIFPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E345472099337A002A0D95 /* NukeAVIFPlugin.framework */; };
 		F8620F7920993BC900DFCC84 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8620F7720993B9C00DFCC84 /* Nuke.framework */; };
 		F8620F7A20993BDE00DFCC84 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8620F7720993B9C00DFCC84 /* Nuke.framework */; };
-		F8620F7C20993CEF00DFCC84 /* Nuke.framework in Copy Frameworks */ = {isa = PBXBuildFile; fileRef = F8620F7720993B9C00DFCC84 /* Nuke.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		F8A0AED4209FE4AE008A06AD /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* AVIFImage.swift */; };
 		F8A0AEED209FE4AE008A06AD /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */; };
 		F8A0AEF7209FE4AE008A06AD /* AVIFDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */; };
@@ -90,53 +87,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		F80D7480209FDD810015EA10 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				F8138E93209FE0530073DCF5 /* Nuke.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8620F7B20993CE200DFCC84 /* Copy Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-				6547FE60275CFC2500C70158 /* libavif-Xcode in Copy Frameworks */,
-				F8620F7C20993CEF00DFCC84 /* Nuke.framework in Copy Frameworks */,
-			);
-			name = "Copy Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
-		6547FE5A275CF57600C70158 /* libavif-Xcode */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "libavif-Xcode"; path = "../libavif-Xcode"; sourceTree = "<group>"; };
 		65FD4DCA275CE0330050C55B /* sample.avif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.avif; sourceTree = "<group>"; };
 		C74750E12030E2FC00FA7FE2 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
 		F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests.swift; sourceTree = "<group>"; };
 		F80D746A209FD9B10015EA10 /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F80D746D209FDB560015EA10 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		F80D746E209FDB560015EA10 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		F80D746F209FDB560015EA10 /* Cartfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile; sourceTree = "<group>"; };
-		F80D7470209FDB570015EA10 /* Cartfile.resolved */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Cartfile.resolved; sourceTree = "<group>"; };
 		F80D7471209FDB570015EA10 /* Nuke-AVIF-Plugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Nuke-AVIF-Plugin.podspec"; sourceTree = "<group>"; };
-		F80D7477209FDBE60015EA10 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/tvOS/Nuke.framework; sourceTree = "<group>"; };
 		F80D748C209FDD810015EA10 /* Nuke-AVIF-PluginTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nuke-AVIF-PluginTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8146577200EE3C700364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nuke_AVIF_Plugin.h; sourceTree = "<group>"; };
 		F814657D200EE40500364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8146582200EE4D700364146 /* AVIFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFImage.swift; sourceTree = "<group>"; };
-		F8620F7720993B9C00DFCC84 /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/Mac/Nuke.framework; sourceTree = "<group>"; };
 		F8766311200F0E48004A8A23 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
 		F8A0AF6C209FE4AE008A06AD /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8A0AF6E209FE4D7008A06AD /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/watchOS/Nuke.framework; sourceTree = "<group>"; };
 		F8AD60DA209716AB00D056B2 /* AVIFDataDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVIFDataDecoder.h; sourceTree = "<group>"; };
 		F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVIFDataDecoder.m; sourceTree = "<group>"; };
 		F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+AVIFFormat.swift"; sourceTree = "<group>"; };
@@ -148,7 +113,6 @@
 		F8E3455C20993551002A0D95 /* NukeAVIFPlugin Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeAVIFPlugin Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8E345602099371C002A0D95 /* AVIFDecodeTests_MacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests_MacOS.swift; sourceTree = "<group>"; };
 		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
-		F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Nuke.framework; path = Carthage/Build/iOS/Nuke.framework; sourceTree = "<group>"; };
 		F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIFImageMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -217,14 +181,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		6547FE59275CF57600C70158 /* Packages */ = {
-			isa = PBXGroup;
-			children = (
-				6547FE5A275CF57600C70158 /* libavif-Xcode */,
-			);
-			name = Packages;
-			sourceTree = "<group>";
-		};
 		65925366275CD558009A0A82 /* Recovered References */ = {
 			isa = PBXGroup;
 			children = (
@@ -235,11 +191,9 @@
 		F80D746C209FDB370015EA10 /* MetaData */ = {
 			isa = PBXGroup;
 			children = (
-				F80D746F209FDB560015EA10 /* Cartfile */,
 				F80D746E209FDB560015EA10 /* CHANGELOG.md */,
 				F80D746D209FDB560015EA10 /* README.md */,
 				F80D7471209FDB570015EA10 /* Nuke-AVIF-Plugin.podspec */,
-				F80D7470209FDB570015EA10 /* Cartfile.resolved */,
 			);
 			name = MetaData;
 			sourceTree = "<group>";
@@ -288,7 +242,6 @@
 		F8BAAEB5200EDE100001110D = {
 			isa = PBXGroup;
 			children = (
-				6547FE59275CF57600C70158 /* Packages */,
 				F8146581200EE42B00364146 /* Source */,
 				F814657B200EE3E000364146 /* Supporting Files */,
 				F8146575200EE39C00364146 /* Tests */,
@@ -398,7 +351,6 @@
 				F80D7434209FD9B10015EA10 /* Frameworks */,
 				F80D7436209FD9B10015EA10 /* Headers */,
 				F80D7465209FD9B10015EA10 /* Resources */,
-				F80D7466209FD9B10015EA10 /* [Carthage] copy-framework */,
 			);
 			buildRules = (
 			);
@@ -414,10 +366,8 @@
 			buildConfigurationList = F80D7489209FDD810015EA10 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-PluginTests tvOS" */;
 			buildPhases = (
 				F80D747D209FDD810015EA10 /* Sources */,
-				F80D7480209FDD810015EA10 /* Copy Frameworks */,
 				F80D7482209FDD810015EA10 /* Frameworks */,
 				F80D7485209FDD810015EA10 /* Resources */,
-				F80D7488209FDD810015EA10 /* [carthage] copy framework */,
 			);
 			buildRules = (
 			);
@@ -437,7 +387,6 @@
 				F8A0AF31209FE4AE008A06AD /* Frameworks */,
 				F8A0AF33209FE4AE008A06AD /* Headers */,
 				F8A0AF62209FE4AE008A06AD /* Resources */,
-				F8A0AF68209FE4AE008A06AD /* [Carthage] copy-framework */,
 			);
 			buildRules = (
 			);
@@ -456,7 +405,6 @@
 				F8BAAEBB200EDE100001110D /* Frameworks */,
 				F8BAAEBC200EDE100001110D /* Headers */,
 				F8BAAEBD200EDE100001110D /* Resources */,
-				F8FAA4D8200EF20B00DD0BED /* [Carthage] copy-framework */,
 			);
 			buildRules = (
 			);
@@ -474,7 +422,6 @@
 				F8BAAEC4200EDE100001110D /* Sources */,
 				F8BAAEC5200EDE100001110D /* Frameworks */,
 				F8BAAEC6200EDE100001110D /* Resources */,
-				F8FAA4DA200EF4FA00DD0BED /* [carthage] copy framework */,
 			);
 			buildRules = (
 			);
@@ -494,7 +441,6 @@
 				F8E345112099337A002A0D95 /* Frameworks */,
 				F8E345132099337A002A0D95 /* Headers */,
 				F8E345422099337A002A0D95 /* Resources */,
-				F8E345432099337A002A0D95 /* [Carthage] copy-framework */,
 			);
 			buildRules = (
 			);
@@ -513,10 +459,8 @@
 			buildConfigurationList = F8E3455920993551002A0D95 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-PluginTests macOS" */;
 			buildPhases = (
 				F8E3454F20993551002A0D95 /* Sources */,
-				F8620F7B20993CE200DFCC84 /* Copy Frameworks */,
 				F8E3455220993551002A0D95 /* Frameworks */,
 				F8E3455520993551002A0D95 /* Resources */,
-				F8E3455820993551002A0D95 /* [carthage] copy framework */,
 			);
 			buildRules = (
 			);
@@ -582,9 +526,6 @@
 				Base,
 			);
 			mainGroup = F8BAAEB5200EDE100001110D;
-			packageReferences = (
-				6547FE5B275CF61A00C70158 /* XCRemoteSwiftPackageReference "libavif-Xcode" */,
-			);
 			productRefGroup = F8BAAEC0200EDE100001110D /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -660,121 +601,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		F80D7466209FD9B10015EA10 /* [Carthage] copy-framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/Nuke.framework",
-			);
-			name = "[Carthage] copy-framework";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		F80D7488209FDD810015EA10 /* [carthage] copy framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/tvOS/Nuke.framework",
-			);
-			name = "[carthage] copy framework";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		F8A0AF68209FE4AE008A06AD /* [Carthage] copy-framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/watchOS/Nuke.framework",
-			);
-			name = "[Carthage] copy-framework";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		F8E345432099337A002A0D95 /* [Carthage] copy-framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Nuke.framework",
-			);
-			name = "[Carthage] copy-framework";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		F8E3455820993551002A0D95 /* [carthage] copy framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/Mac/Nuke.framework",
-			);
-			name = "[carthage] copy framework";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-		F8FAA4D8200EF20B00DD0BED /* [Carthage] copy-framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
-			);
-			name = "[Carthage] copy-framework";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks\n";
-		};
-		F8FAA4DA200EF4FA00DD0BED /* [carthage] copy framework */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Nuke.framework",
-			);
-			name = "[carthage] copy framework";
-			outputPaths = (
-				"$(DERIVED_FILE_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Nuke.framework",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F80D73BF209FD9B10015EA10 /* Sources */ = {
@@ -1296,7 +1122,6 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = "../libavif-Xcode";
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1328,7 +1153,6 @@
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_ASSET_PATHS = "../libavif-Xcode";
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1483,30 +1307,3 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		6547FE5B275CF61A00C70158 /* XCRemoteSwiftPackageReference "libavif-Xcode" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/SDWebImage/libavif-Xcode";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 0.9.1;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		6547FE5C275CF61A00C70158 /* libavif */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6547FE5B275CF61A00C70158 /* XCRemoteSwiftPackageReference "libavif-Xcode" */;
-			productName = libavif;
-		};
-		6547FE5E275CFA9700C70158 /* libavif */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 6547FE5B275CF61A00C70158 /* XCRemoteSwiftPackageReference "libavif-Xcode" */;
-			productName = libavif;
-		};
-/* End XCSwiftPackageProductDependency section */
-	};
-	rootObject = F8BAAEB6200EDE100001110D /* Project object */;
-}

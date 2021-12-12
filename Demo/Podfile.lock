@@ -1,0 +1,46 @@
+PODS:
+  - libaom (2.0.2):
+    - libvmaf
+  - libavif (0.9.2):
+    - libavif/libaom (= 0.9.2)
+  - libavif/core (0.9.2)
+  - libavif/libaom (0.9.2):
+    - libaom (>= 2.0.0)
+    - libavif/core
+  - libavif/svt-av1 (0.9.2):
+    - libavif/core
+    - svt-av1 (>= 0.8.7)
+  - libvmaf (2.2.0)
+  - Nuke (9.5.0)
+  - Nuke-AVIF-Plugin (1.0.0):
+    - libavif (>= 0.9.1)
+    - Nuke (~> 9.0)
+  - svt-av1 (0.8.7)
+
+DEPENDENCIES:
+  - libavif/svt-av1
+  - Nuke-AVIF-Plugin (from `../`)
+
+SPEC REPOS:
+  trunk:
+    - libaom
+    - libavif
+    - libvmaf
+    - Nuke
+    - svt-av1
+
+EXTERNAL SOURCES:
+  Nuke-AVIF-Plugin:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  libaom: 9bb51e0f8f9192245e3ca2a1c9e4375d9cbccc52
+  libavif: 280ef3e8eab0c51de6f98638d5a9776cf9e2f163
+  libvmaf: 8d61aabc2f4ed3e6591cf7406fa00a223ec11289
+  Nuke: 6f400a4ea957e09149ec335a3c6acdcc814d89e4
+  Nuke-AVIF-Plugin: a5b673442cbb7478c84c3e5a65bd5234e0205d42
+  svt-av1: 7a7352c96b9d2b9a6e4282864f0d1a25aa0ca1b9
+
+PODFILE CHECKSUM: 899c776290fa1279fa6a5f05e0191e95cee9761c
+
+COCOAPODS: 1.11.2
