@@ -3,890 +3,293 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		6547FE5D275CF61A00C70158 /* libavif in Frameworks */ = {isa = PBXBuildFile; productRef = 6547FE5C275CF61A00C70158 /* libavif */; };
-		6547FE5F275CFA9700C70158 /* libavif in Frameworks */ = {isa = PBXBuildFile; productRef = 6547FE5E275CFA9700C70158 /* libavif */; };
-		65FD4DCB275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
-		65FD4DCC275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
-		65FD4DCD275CE0330050C55B /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65FD4DCA275CE0330050C55B /* sample.avif */; };
-		C7A377CC20334B7500339789 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
-		F80D73D7209FD9B10015EA10 /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* AVIFImage.swift */; };
-		F80D73F0209FD9B10015EA10 /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */; };
-		F80D73FA209FD9B10015EA10 /* AVIFDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */; };
-		F80D745F209FD9B10015EA10 /* AVIFDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AD60DA209716AB00D056B2 /* AVIFDataDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F80D7463209FD9B10015EA10 /* AVIFImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F80D7464209FD9B10015EA10 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F80D7479209FDBF20015EA10 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D7477209FDBE60015EA10 /* Nuke.framework */; };
-		F80D7483209FDD810015EA10 /* NukeAVIFPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E345472099337A002A0D95 /* NukeAVIFPlugin.framework */; };
-		F80D7486209FDD810015EA10 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
-		F80D7487209FDD810015EA10 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
-		F80D7490209FDF170015EA10 /* AVIFDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */; };
-		F8138E94209FE07E0073DCF5 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F80D7477209FDBE60015EA10 /* Nuke.framework */; };
-		F814657E200EE40500364146 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8146583200EE4D700364146 /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* AVIFImage.swift */; };
-		F8620F722099394000DFCC84 /* NukeAVIFPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8E345472099337A002A0D95 /* NukeAVIFPlugin.framework */; };
-		F8620F7920993BC900DFCC84 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8620F7720993B9C00DFCC84 /* Nuke.framework */; };
-		F8620F7A20993BDE00DFCC84 /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8620F7720993B9C00DFCC84 /* Nuke.framework */; };
-		F8A0AED4209FE4AE008A06AD /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* AVIFImage.swift */; };
-		F8A0AEED209FE4AE008A06AD /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */; };
-		F8A0AEF7209FE4AE008A06AD /* AVIFDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */; };
-		F8A0AF5C209FE4AE008A06AD /* AVIFDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AD60DA209716AB00D056B2 /* AVIFDataDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8A0AF60209FE4AE008A06AD /* AVIFImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8A0AF61209FE4AE008A06AD /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8A0AF6F209FE4D7008A06AD /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8A0AF6E209FE4D7008A06AD /* Nuke.framework */; };
-		F8AD60DC209716AB00D056B2 /* AVIFDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AD60DA209716AB00D056B2 /* AVIFDataDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8AD60DD209716AB00D056B2 /* AVIFDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */; };
-		F8AD60E0209719A000D056B2 /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */; };
-		F8BAAEC9200EDE100001110D /* NukeAVIFPlugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8BAAEBF200EDE100001110D /* NukeAVIFPlugin.framework */; };
-		F8CFDAE420A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
-		F8CFDAE520A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
-		F8CFDAE620A12A2A00C87102 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */; };
-		F8CFDAE820A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */; };
-		F8CFDAE920A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */; };
-		F8CFDAEA20A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */; };
-		F8E344B42099337A002A0D95 /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8146582200EE4D700364146 /* AVIFImage.swift */; };
-		F8E344CD2099337A002A0D95 /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */; };
-		F8E344D72099337A002A0D95 /* AVIFDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */; };
-		F8E3453C2099337A002A0D95 /* AVIFDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = F8AD60DA209716AB00D056B2 /* AVIFDataDecoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8E345402099337A002A0D95 /* AVIFImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8E345412099337A002A0D95 /* Nuke_AVIF_Plugin.h in Headers */ = {isa = PBXBuildFile; fileRef = F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		F8E3455620993551002A0D95 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = C74750E12030E2FC00FA7FE2 /* sample.gif */; };
-		F8E3455720993551002A0D95 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
-		F8E345612099371C002A0D95 /* AVIFDecodeTests_MacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = F8E345602099371C002A0D95 /* AVIFDecodeTests_MacOS.swift */; };
-		F8E345622099376B002A0D95 /* AVIFDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */; };
-		F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = F8FAA4D3200EF08400DD0BED /* sample.webp */; };
-		F8FAA4D7200EF1FD00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
-		F8FAA4D9200EF2FA00DD0BED /* Nuke.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */; };
-		F8FAA785200EF85800DD0BED /* AVIFImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		65E4575B2766206D008C29A1 /* Data+AVIFFormat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457552766206D008C29A1 /* Data+AVIFFormat.swift */; };
+		65E4575C2766206D008C29A1 /* AVIFImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457562766206D008C29A1 /* AVIFImage.swift */; };
+		65E4575D2766206D008C29A1 /* AVIFDataDecoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 65E457582766206D008C29A1 /* AVIFDataDecoder.m */; };
+		65E4575E2766206D008C29A1 /* AVIFImageMacros.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E457592766206D008C29A1 /* AVIFImageMacros.h */; };
+		65E4575F2766206D008C29A1 /* AVIFDataDecoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 65E4575A2766206D008C29A1 /* AVIFDataDecoder.h */; };
+		65E4576D2766207D008C29A1 /* sample.gif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457652766207D008C29A1 /* sample.gif */; };
+		65E4576E2766207D008C29A1 /* sample.webp in Resources */ = {isa = PBXBuildFile; fileRef = 65E457662766207D008C29A1 /* sample.webp */; };
+		65E4576F2766207D008C29A1 /* sample.avif in Resources */ = {isa = PBXBuildFile; fileRef = 65E457672766207D008C29A1 /* sample.avif */; };
+		65E4577C2766217A008C29A1 /* Nuke_AVIF_Plugin.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 65E4574927661F7A008C29A1 /* Nuke_AVIF_Plugin.framework */; };
+		65E4578227662187008C29A1 /* AVIFImageDecoderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457682766207D008C29A1 /* AVIFImageDecoderTests.swift */; };
+		65E4578327662187008C29A1 /* AVIFDecodeTests_MacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457612766207D008C29A1 /* AVIFDecodeTests_MacOS.swift */; };
+		65E4578427662187008C29A1 /* DataExtensionsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457632766207D008C29A1 /* DataExtensionsTests.swift */; };
+		65E4578527662187008C29A1 /* AVIFDecodeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65E457622766207D008C29A1 /* AVIFDecodeTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		F80D748E209FDECC0015EA10 /* PBXContainerItemProxy */ = {
+		65E4577D2766217A008C29A1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = F8BAAEB6200EDE100001110D /* Project object */;
+			containerPortal = 65E4574027661F7A008C29A1 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = F80D73BE209FD9B10015EA10;
-			remoteInfo = "Nuke-AVIF-Plugin tvOS";
-		};
-		F8BAAECA200EDE100001110D /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F8BAAEB6200EDE100001110D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8BAAEBE200EDE100001110D;
+			remoteGlobalIDString = 65E4574827661F7A008C29A1;
 			remoteInfo = "Nuke-AVIF-Plugin";
-		};
-		F8E3455E2099365B002A0D95 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = F8BAAEB6200EDE100001110D /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = F8E3449B2099337A002A0D95;
-			remoteInfo = "Nuke-AVIF-Plugin macOS";
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		65FD4DCA275CE0330050C55B /* sample.avif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.avif; sourceTree = "<group>"; };
-		C74750E12030E2FC00FA7FE2 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
-		F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests.swift; sourceTree = "<group>"; };
-		F80D746A209FD9B10015EA10 /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F80D746D209FDB560015EA10 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		F80D746E209FDB560015EA10 /* CHANGELOG.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = CHANGELOG.md; sourceTree = "<group>"; };
-		F80D7471209FDB570015EA10 /* Nuke-AVIF-Plugin.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "Nuke-AVIF-Plugin.podspec"; sourceTree = "<group>"; };
-		F80D748C209FDD810015EA10 /* Nuke-AVIF-PluginTests tvOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Nuke-AVIF-PluginTests tvOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8146577200EE3C700364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Nuke_AVIF_Plugin.h; sourceTree = "<group>"; };
-		F814657D200EE40500364146 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		F8146582200EE4D700364146 /* AVIFImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFImage.swift; sourceTree = "<group>"; };
-		F8766311200F0E48004A8A23 /* module.modulemap */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.module-map"; path = module.modulemap; sourceTree = "<group>"; };
-		F8A0AF6C209FE4AE008A06AD /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8AD60DA209716AB00D056B2 /* AVIFDataDecoder.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AVIFDataDecoder.h; sourceTree = "<group>"; };
-		F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AVIFDataDecoder.m; sourceTree = "<group>"; };
-		F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+AVIFFormat.swift"; sourceTree = "<group>"; };
-		F8BAAEBF200EDE100001110D /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8BAAEC8200EDE100001110D /* NukeAVIFPlugin Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeAVIFPlugin Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
-		F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFImageDecoderTests.swift; sourceTree = "<group>"; };
-		F8E345472099337A002A0D95 /* NukeAVIFPlugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = NukeAVIFPlugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8E3455C20993551002A0D95 /* NukeAVIFPlugin Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "NukeAVIFPlugin Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		F8E345602099371C002A0D95 /* AVIFDecodeTests_MacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests_MacOS.swift; sourceTree = "<group>"; };
-		F8FAA4D3200EF08400DD0BED /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
-		F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIFImageMacros.h; sourceTree = "<group>"; };
+		65E4574927661F7A008C29A1 /* Nuke_AVIF_Plugin.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Nuke_AVIF_Plugin.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		65E457552766206D008C29A1 /* Data+AVIFFormat.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Data+AVIFFormat.swift"; sourceTree = "<group>"; };
+		65E457562766206D008C29A1 /* AVIFImage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVIFImage.swift; sourceTree = "<group>"; };
+		65E457582766206D008C29A1 /* AVIFDataDecoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AVIFDataDecoder.m; sourceTree = "<group>"; };
+		65E457592766206D008C29A1 /* AVIFImageMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIFImageMacros.h; sourceTree = "<group>"; };
+		65E4575A2766206D008C29A1 /* AVIFDataDecoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AVIFDataDecoder.h; sourceTree = "<group>"; };
+		65E457612766207D008C29A1 /* AVIFDecodeTests_MacOS.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests_MacOS.swift; sourceTree = "<group>"; };
+		65E457622766207D008C29A1 /* AVIFDecodeTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVIFDecodeTests.swift; sourceTree = "<group>"; };
+		65E457632766207D008C29A1 /* DataExtensionsTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataExtensionsTests.swift; sourceTree = "<group>"; };
+		65E457652766207D008C29A1 /* sample.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = sample.gif; sourceTree = "<group>"; };
+		65E457662766207D008C29A1 /* sample.webp */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.webp; sourceTree = "<group>"; };
+		65E457672766207D008C29A1 /* sample.avif */ = {isa = PBXFileReference; lastKnownFileType = file; path = sample.avif; sourceTree = "<group>"; };
+		65E457682766207D008C29A1 /* AVIFImageDecoderTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AVIFImageDecoderTests.swift; sourceTree = "<group>"; };
+		65E457692766207D008C29A1 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		65E457782766217A008C29A1 /* Nuke_AVIF_PluginTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Nuke_AVIF_PluginTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		F80D7434209FD9B10015EA10 /* Frameworks */ = {
+		65E4574627661F7A008C29A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80D7479209FDBF20015EA10 /* Nuke.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F80D7482209FDD810015EA10 /* Frameworks */ = {
+		65E457752766217A008C29A1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80D7483209FDD810015EA10 /* NukeAVIFPlugin.framework in Frameworks */,
-				F8138E94209FE07E0073DCF5 /* Nuke.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8A0AF31209FE4AE008A06AD /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8A0AF6F209FE4D7008A06AD /* Nuke.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8BAAEBB200EDE100001110D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8FAA4D7200EF1FD00DD0BED /* Nuke.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8BAAEC5200EDE100001110D /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8BAAEC9200EDE100001110D /* NukeAVIFPlugin.framework in Frameworks */,
-				F8FAA4D9200EF2FA00DD0BED /* Nuke.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E345112099337A002A0D95 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6547FE5F275CFA9700C70158 /* libavif in Frameworks */,
-				F8620F7920993BC900DFCC84 /* Nuke.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E3455220993551002A0D95 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6547FE5D275CF61A00C70158 /* libavif in Frameworks */,
-				F8620F722099394000DFCC84 /* NukeAVIFPlugin.framework in Frameworks */,
-				F8620F7A20993BDE00DFCC84 /* Nuke.framework in Frameworks */,
+				65E4577C2766217A008C29A1 /* Nuke_AVIF_Plugin.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		65925366275CD558009A0A82 /* Recovered References */ = {
+		65E4573F27661F7A008C29A1 = {
 			isa = PBXGroup;
 			children = (
-			);
-			name = "Recovered References";
-			sourceTree = "<group>";
-		};
-		F80D746C209FDB370015EA10 /* MetaData */ = {
-			isa = PBXGroup;
-			children = (
-				F80D746E209FDB560015EA10 /* CHANGELOG.md */,
-				F80D746D209FDB560015EA10 /* README.md */,
-				F80D7471209FDB570015EA10 /* Nuke-AVIF-Plugin.podspec */,
-			);
-			name = MetaData;
-			sourceTree = "<group>";
-		};
-		F8146575200EE39C00364146 /* Tests */ = {
-			isa = PBXGroup;
-			children = (
-				F8146577200EE3C700364146 /* Info.plist */,
-				F8E345602099371C002A0D95 /* AVIFDecodeTests_MacOS.swift */,
-				F80A457E20197CE200825C6D /* AVIFDecodeTests.swift */,
-				F8FAA4D2200EF07300DD0BED /* Resource */,
-				F8CFDAE320A12A2A00C87102 /* DataExtensionsTests.swift */,
-				F8CFDAE720A1305500C87102 /* AVIFImageDecoderTests.swift */,
-			);
-			path = Tests;
-			sourceTree = "<group>";
-		};
-		F814657B200EE3E000364146 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				F814657D200EE40500364146 /* Info.plist */,
-				F814657C200EE40500364146 /* Nuke_AVIF_Plugin.h */,
-				F8766311200F0E48004A8A23 /* module.modulemap */,
-			);
-			path = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		F8146581200EE42B00364146 /* Source */ = {
-			isa = PBXGroup;
-			children = (
-				F8AD60DE2097198B00D056B2 /* Extensions */,
-				F8FAA783200EF84600DD0BED /* AVIF */,
-				F8146582200EE4D700364146 /* AVIFImage.swift */,
-			);
-			path = Source;
-			sourceTree = "<group>";
-		};
-		F8AD60DE2097198B00D056B2 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				F8AD60DF209719A000D056B2 /* Data+AVIFFormat.swift */,
-			);
-			path = Extensions;
-			sourceTree = "<group>";
-		};
-		F8BAAEB5200EDE100001110D = {
-			isa = PBXGroup;
-			children = (
-				F8146581200EE42B00364146 /* Source */,
-				F814657B200EE3E000364146 /* Supporting Files */,
-				F8146575200EE39C00364146 /* Tests */,
-				F8BAAEC0200EDE100001110D /* Products */,
-				F80D746C209FDB370015EA10 /* MetaData */,
-				F8FAA4D5200EF1FD00DD0BED /* Frameworks */,
-				65925366275CD558009A0A82 /* Recovered References */,
+				65E457532766206D008C29A1 /* Source */,
+				65E457792766217A008C29A1 /* Nuke_AVIF_PluginTests */,
+				65E4574A27661F7A008C29A1 /* Products */,
 			);
 			sourceTree = "<group>";
 		};
-		F8BAAEC0200EDE100001110D /* Products */ = {
+		65E4574A27661F7A008C29A1 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				F8BAAEBF200EDE100001110D /* NukeAVIFPlugin.framework */,
-				F8BAAEC8200EDE100001110D /* NukeAVIFPlugin Tests iOS.xctest */,
-				F8E345472099337A002A0D95 /* NukeAVIFPlugin.framework */,
-				F8E3455C20993551002A0D95 /* NukeAVIFPlugin Tests macOS.xctest */,
-				F80D746A209FD9B10015EA10 /* NukeAVIFPlugin.framework */,
-				F80D748C209FDD810015EA10 /* Nuke-AVIF-PluginTests tvOS.xctest */,
-				F8A0AF6C209FE4AE008A06AD /* NukeAVIFPlugin.framework */,
+				65E4574927661F7A008C29A1 /* Nuke_AVIF_Plugin.framework */,
+				65E457782766217A008C29A1 /* Nuke_AVIF_PluginTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		F8FAA4D2200EF07300DD0BED /* Resource */ = {
+		65E457532766206D008C29A1 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				65FD4DCA275CE0330050C55B /* sample.avif */,
-				C74750E12030E2FC00FA7FE2 /* sample.gif */,
-				F8FAA4D3200EF08400DD0BED /* sample.webp */,
+				65E457542766206D008C29A1 /* Extensions */,
+				65E457562766206D008C29A1 /* AVIFImage.swift */,
+				65E457572766206D008C29A1 /* AVIF */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		65E457542766206D008C29A1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				65E457552766206D008C29A1 /* Data+AVIFFormat.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		65E457572766206D008C29A1 /* AVIF */ = {
+			isa = PBXGroup;
+			children = (
+				65E457582766206D008C29A1 /* AVIFDataDecoder.m */,
+				65E457592766206D008C29A1 /* AVIFImageMacros.h */,
+				65E4575A2766206D008C29A1 /* AVIFDataDecoder.h */,
+			);
+			path = AVIF;
+			sourceTree = "<group>";
+		};
+		65E457642766207D008C29A1 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				65E457652766207D008C29A1 /* sample.gif */,
+				65E457662766207D008C29A1 /* sample.webp */,
+				65E457672766207D008C29A1 /* sample.avif */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		F8FAA4D5200EF1FD00DD0BED /* Frameworks */ = {
+		65E457792766217A008C29A1 /* Nuke_AVIF_PluginTests */ = {
 			isa = PBXGroup;
 			children = (
-				F8A0AF6E209FE4D7008A06AD /* Nuke.framework */,
-				F80D7477209FDBE60015EA10 /* Nuke.framework */,
-				F8620F7720993B9C00DFCC84 /* Nuke.framework */,
-				F8FAA4D6200EF1FD00DD0BED /* Nuke.framework */,
+				65E457612766207D008C29A1 /* AVIFDecodeTests_MacOS.swift */,
+				65E457622766207D008C29A1 /* AVIFDecodeTests.swift */,
+				65E457632766207D008C29A1 /* DataExtensionsTests.swift */,
+				65E457642766207D008C29A1 /* Resource */,
+				65E457682766207D008C29A1 /* AVIFImageDecoderTests.swift */,
+				65E457692766207D008C29A1 /* Info.plist */,
 			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		F8FAA783200EF84600DD0BED /* AVIF */ = {
-			isa = PBXGroup;
-			children = (
-				F8FAA784200EF85800DD0BED /* AVIFImageMacros.h */,
-				F8AD60DA209716AB00D056B2 /* AVIFDataDecoder.h */,
-				F8AD60DB209716AB00D056B2 /* AVIFDataDecoder.m */,
-			);
-			path = AVIF;
+			path = Nuke_AVIF_PluginTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		F80D7436209FD9B10015EA10 /* Headers */ = {
+		65E4574427661F7A008C29A1 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80D745F209FD9B10015EA10 /* AVIFDataDecoder.h in Headers */,
-				F80D7463209FD9B10015EA10 /* AVIFImageMacros.h in Headers */,
-				F80D7464209FD9B10015EA10 /* Nuke_AVIF_Plugin.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8A0AF33209FE4AE008A06AD /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8A0AF5C209FE4AE008A06AD /* AVIFDataDecoder.h in Headers */,
-				F8A0AF60209FE4AE008A06AD /* AVIFImageMacros.h in Headers */,
-				F8A0AF61209FE4AE008A06AD /* Nuke_AVIF_Plugin.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8BAAEBC200EDE100001110D /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8AD60DC209716AB00D056B2 /* AVIFDataDecoder.h in Headers */,
-				F8FAA785200EF85800DD0BED /* AVIFImageMacros.h in Headers */,
-				F814657E200EE40500364146 /* Nuke_AVIF_Plugin.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E345132099337A002A0D95 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8E3453C2099337A002A0D95 /* AVIFDataDecoder.h in Headers */,
-				F8E345402099337A002A0D95 /* AVIFImageMacros.h in Headers */,
-				F8E345412099337A002A0D95 /* Nuke_AVIF_Plugin.h in Headers */,
+				65E4575F2766206D008C29A1 /* AVIFDataDecoder.h in Headers */,
+				65E4575E2766206D008C29A1 /* AVIFImageMacros.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		F80D73BE209FD9B10015EA10 /* Nuke-AVIF-Plugin tvOS */ = {
+		65E4574827661F7A008C29A1 /* Nuke-AVIF-Plugin */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F80D7467209FD9B10015EA10 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin tvOS" */;
+			buildConfigurationList = 65E4575027661F7A008C29A1 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin" */;
 			buildPhases = (
-				F80D73BF209FD9B10015EA10 /* Sources */,
-				F80D7434209FD9B10015EA10 /* Frameworks */,
-				F80D7436209FD9B10015EA10 /* Headers */,
-				F80D7465209FD9B10015EA10 /* Resources */,
+				65E4574427661F7A008C29A1 /* Headers */,
+				65E4574527661F7A008C29A1 /* Sources */,
+				65E4574627661F7A008C29A1 /* Frameworks */,
+				65E4574727661F7A008C29A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
-			name = "Nuke-AVIF-Plugin tvOS";
+			name = "Nuke-AVIF-Plugin";
 			productName = "Nuke-AVIF-Plugin";
-			productReference = F80D746A209FD9B10015EA10 /* NukeAVIFPlugin.framework */;
+			productReference = 65E4574927661F7A008C29A1 /* Nuke_AVIF_Plugin.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		F80D747A209FDD810015EA10 /* Nuke-AVIF-PluginTests tvOS */ = {
+		65E457772766217A008C29A1 /* Nuke_AVIF_PluginTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = F80D7489209FDD810015EA10 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-PluginTests tvOS" */;
+			buildConfigurationList = 65E4577F2766217A008C29A1 /* Build configuration list for PBXNativeTarget "Nuke_AVIF_PluginTests" */;
 			buildPhases = (
-				F80D747D209FDD810015EA10 /* Sources */,
-				F80D7482209FDD810015EA10 /* Frameworks */,
-				F80D7485209FDD810015EA10 /* Resources */,
+				65E457742766217A008C29A1 /* Sources */,
+				65E457752766217A008C29A1 /* Frameworks */,
+				65E457762766217A008C29A1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				F80D748F209FDECC0015EA10 /* PBXTargetDependency */,
+				65E4577E2766217A008C29A1 /* PBXTargetDependency */,
 			);
-			name = "Nuke-AVIF-PluginTests tvOS";
-			productName = "Nuke-AVIF-PluginTests";
-			productReference = F80D748C209FDD810015EA10 /* Nuke-AVIF-PluginTests tvOS.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F8A0AEBB209FE4AE008A06AD /* Nuke-AVIF-Plugin watchOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8A0AF69209FE4AE008A06AD /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin watchOS" */;
-			buildPhases = (
-				F8A0AEBC209FE4AE008A06AD /* Sources */,
-				F8A0AF31209FE4AE008A06AD /* Frameworks */,
-				F8A0AF33209FE4AE008A06AD /* Headers */,
-				F8A0AF62209FE4AE008A06AD /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Nuke-AVIF-Plugin watchOS";
-			productName = "Nuke-AVIF-Plugin";
-			productReference = F8A0AF6C209FE4AE008A06AD /* NukeAVIFPlugin.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F8BAAEBE200EDE100001110D /* Nuke-AVIF-Plugin iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8BAAED3200EDE100001110D /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin iOS" */;
-			buildPhases = (
-				F8BAAEBA200EDE100001110D /* Sources */,
-				F8BAAEBB200EDE100001110D /* Frameworks */,
-				F8BAAEBC200EDE100001110D /* Headers */,
-				F8BAAEBD200EDE100001110D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Nuke-AVIF-Plugin iOS";
-			productName = "Nuke-AVIF-Plugin";
-			productReference = F8BAAEBF200EDE100001110D /* NukeAVIFPlugin.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F8BAAEC7200EDE100001110D /* Nuke-AVIF-PluginTests iOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8BAAED6200EDE100001110D /* Build configuration list for PBXNativeTarget "Nuke-AVIF-PluginTests iOS" */;
-			buildPhases = (
-				F8BAAEC4200EDE100001110D /* Sources */,
-				F8BAAEC5200EDE100001110D /* Frameworks */,
-				F8BAAEC6200EDE100001110D /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F8BAAECB200EDE100001110D /* PBXTargetDependency */,
-			);
-			name = "Nuke-AVIF-PluginTests iOS";
-			productName = "Nuke-AVIF-PluginTests";
-			productReference = F8BAAEC8200EDE100001110D /* NukeAVIFPlugin Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
-		F8E3449B2099337A002A0D95 /* Nuke-AVIF-Plugin macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8E345442099337A002A0D95 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin macOS" */;
-			buildPhases = (
-				F8E3449C2099337A002A0D95 /* Sources */,
-				F8E345112099337A002A0D95 /* Frameworks */,
-				F8E345132099337A002A0D95 /* Headers */,
-				F8E345422099337A002A0D95 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = "Nuke-AVIF-Plugin macOS";
-			packageProductDependencies = (
-				6547FE5E275CFA9700C70158 /* libavif */,
-			);
-			productName = "Nuke-AVIF-Plugin";
-			productReference = F8E345472099337A002A0D95 /* NukeAVIFPlugin.framework */;
-			productType = "com.apple.product-type.framework";
-		};
-		F8E3454C20993551002A0D95 /* Nuke-AVIF-PluginTests macOS */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F8E3455920993551002A0D95 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-PluginTests macOS" */;
-			buildPhases = (
-				F8E3454F20993551002A0D95 /* Sources */,
-				F8E3455220993551002A0D95 /* Frameworks */,
-				F8E3455520993551002A0D95 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				F8E3455F2099365B002A0D95 /* PBXTargetDependency */,
-			);
-			name = "Nuke-AVIF-PluginTests macOS";
-			packageProductDependencies = (
-				6547FE5C275CF61A00C70158 /* libavif */,
-			);
-			productName = "Nuke-AVIF-PluginTests";
-			productReference = F8E3455C20993551002A0D95 /* NukeAVIFPlugin Tests macOS.xctest */;
+			name = Nuke_AVIF_PluginTests;
+			productName = Nuke_AVIF_PluginTests;
+			productReference = 65E457782766217A008C29A1 /* Nuke_AVIF_PluginTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-		F8BAAEB6200EDE100001110D /* Project object */ = {
+		65E4574027661F7A008C29A1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0930;
-				ORGANIZATIONNAME = delneg;
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1310;
+				LastUpgradeCheck = 1310;
 				TargetAttributes = {
-					F80D73BE209FD9B10015EA10 = {
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
+					65E4574827661F7A008C29A1 = {
+						CreatedOnToolsVersion = 13.1;
 					};
-					F80D747A209FDD810015EA10 = {
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-					F8A0AEBB209FE4AE008A06AD = {
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-					F8BAAEBE200EDE100001110D = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-					F8BAAEC7200EDE100001110D = {
-						CreatedOnToolsVersion = 9.2;
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-					F8E3449B2099337A002A0D95 = {
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
-					};
-					F8E3454C20993551002A0D95 = {
-						LastSwiftMigration = 1020;
-						ProvisioningStyle = Automatic;
+					65E457772766217A008C29A1 = {
+						CreatedOnToolsVersion = 13.1;
 					};
 				};
 			};
-			buildConfigurationList = F8BAAEB9200EDE100001110D /* Build configuration list for PBXProject "Nuke-AVIF-Plugin" */;
-			compatibilityVersion = "Xcode 8.0";
+			buildConfigurationList = 65E4574327661F7A008C29A1 /* Build configuration list for PBXProject "Nuke-AVIF-Plugin" */;
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
 				Base,
 			);
-			mainGroup = F8BAAEB5200EDE100001110D;
-			productRefGroup = F8BAAEC0200EDE100001110D /* Products */;
+			mainGroup = 65E4573F27661F7A008C29A1;
+			productRefGroup = 65E4574A27661F7A008C29A1 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				F8BAAEBE200EDE100001110D /* Nuke-AVIF-Plugin iOS */,
-				F8BAAEC7200EDE100001110D /* Nuke-AVIF-PluginTests iOS */,
-				F8E3449B2099337A002A0D95 /* Nuke-AVIF-Plugin macOS */,
-				F8E3454C20993551002A0D95 /* Nuke-AVIF-PluginTests macOS */,
-				F80D73BE209FD9B10015EA10 /* Nuke-AVIF-Plugin tvOS */,
-				F80D747A209FDD810015EA10 /* Nuke-AVIF-PluginTests tvOS */,
-				F8A0AEBB209FE4AE008A06AD /* Nuke-AVIF-Plugin watchOS */,
+				65E4574827661F7A008C29A1 /* Nuke-AVIF-Plugin */,
+				65E457772766217A008C29A1 /* Nuke_AVIF_PluginTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		F80D7465209FD9B10015EA10 /* Resources */ = {
+		65E4574727661F7A008C29A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				65E4576D2766207D008C29A1 /* sample.gif in Resources */,
+				65E4576E2766207D008C29A1 /* sample.webp in Resources */,
+				65E4576F2766207D008C29A1 /* sample.avif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F80D7485209FDD810015EA10 /* Resources */ = {
+		65E457762766217A008C29A1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80D7486209FDD810015EA10 /* sample.gif in Resources */,
-				F80D7487209FDD810015EA10 /* sample.webp in Resources */,
-				65FD4DCD275CE0330050C55B /* sample.avif in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8A0AF62209FE4AE008A06AD /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8BAAEBD200EDE100001110D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8BAAEC6200EDE100001110D /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C7A377CC20334B7500339789 /* sample.gif in Resources */,
-				F8FAA4D4200EF08400DD0BED /* sample.webp in Resources */,
-				65FD4DCB275CE0330050C55B /* sample.avif in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E345422099337A002A0D95 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E3455520993551002A0D95 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8E3455620993551002A0D95 /* sample.gif in Resources */,
-				F8E3455720993551002A0D95 /* sample.webp in Resources */,
-				65FD4DCC275CE0330050C55B /* sample.avif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		F80D73BF209FD9B10015EA10 /* Sources */ = {
+		65E4574527661F7A008C29A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F80D73D7209FD9B10015EA10 /* AVIFImage.swift in Sources */,
-				F80D73F0209FD9B10015EA10 /* Data+AVIFFormat.swift in Sources */,
-				F80D73FA209FD9B10015EA10 /* AVIFDataDecoder.m in Sources */,
+				65E4575B2766206D008C29A1 /* Data+AVIFFormat.swift in Sources */,
+				65E4575D2766206D008C29A1 /* AVIFDataDecoder.m in Sources */,
+				65E4575C2766206D008C29A1 /* AVIFImage.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		F80D747D209FDD810015EA10 /* Sources */ = {
+		65E457742766217A008C29A1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F8CFDAEA20A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */,
-				F8CFDAE620A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
-				F80D7490209FDF170015EA10 /* AVIFDecodeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8A0AEBC209FE4AE008A06AD /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8A0AED4209FE4AE008A06AD /* AVIFImage.swift in Sources */,
-				F8A0AEED209FE4AE008A06AD /* Data+AVIFFormat.swift in Sources */,
-				F8A0AEF7209FE4AE008A06AD /* AVIFDataDecoder.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8BAAEBA200EDE100001110D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8146583200EE4D700364146 /* AVIFImage.swift in Sources */,
-				F8AD60E0209719A000D056B2 /* Data+AVIFFormat.swift in Sources */,
-				F8AD60DD209716AB00D056B2 /* AVIFDataDecoder.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8BAAEC4200EDE100001110D /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8CFDAE820A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */,
-				F8CFDAE420A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
-				F8E345622099376B002A0D95 /* AVIFDecodeTests.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E3449C2099337A002A0D95 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8E344B42099337A002A0D95 /* AVIFImage.swift in Sources */,
-				F8E344CD2099337A002A0D95 /* Data+AVIFFormat.swift in Sources */,
-				F8E344D72099337A002A0D95 /* AVIFDataDecoder.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		F8E3454F20993551002A0D95 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				F8CFDAE920A1305500C87102 /* AVIFImageDecoderTests.swift in Sources */,
-				F8CFDAE520A12A2A00C87102 /* DataExtensionsTests.swift in Sources */,
-				F8E345612099371C002A0D95 /* AVIFDecodeTests_MacOS.swift in Sources */,
+				65E4578327662187008C29A1 /* AVIFDecodeTests_MacOS.swift in Sources */,
+				65E4578427662187008C29A1 /* DataExtensionsTests.swift in Sources */,
+				65E4578227662187008C29A1 /* AVIFImageDecoderTests.swift in Sources */,
+				65E4578527662187008C29A1 /* AVIFDecodeTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		F80D748F209FDECC0015EA10 /* PBXTargetDependency */ = {
+		65E4577E2766217A008C29A1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = F80D73BE209FD9B10015EA10 /* Nuke-AVIF-Plugin tvOS */;
-			targetProxy = F80D748E209FDECC0015EA10 /* PBXContainerItemProxy */;
-		};
-		F8BAAECB200EDE100001110D /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F8BAAEBE200EDE100001110D /* Nuke-AVIF-Plugin iOS */;
-			targetProxy = F8BAAECA200EDE100001110D /* PBXContainerItemProxy */;
-		};
-		F8E3455F2099365B002A0D95 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = F8E3449B2099337A002A0D95 /* Nuke-AVIF-Plugin macOS */;
-			targetProxy = F8E3455E2099365B002A0D95 /* PBXContainerItemProxy */;
+			target = 65E4574827661F7A008C29A1 /* Nuke-AVIF-Plugin */;
+			targetProxy = 65E4577D2766217A008C29A1 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		F80D7468209FD9B10015EA10 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = NukeAVIFPlugin;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Debug;
-		};
-		F80D7469209FD9B10015EA10 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = NukeAVIFPlugin;
-				SDKROOT = appletvos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				TARGETED_DEVICE_FAMILY = 3;
-			};
-			name = Release;
-		};
-		F80D748A209FDD810015EA10 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2,3";
-			};
-			name = Debug;
-		};
-		F80D748B209FDD810015EA10 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTests";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = appletvos;
-				SUPPORTED_PLATFORMS = "appletvsimulator appletvos";
-				TARGETED_DEVICE_FAMILY = "1,2,3";
-			};
-			name = Release;
-		};
-		F8A0AF6A209FE4AE008A06AD /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/watchOS",
-				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = NukeAVIFPlugin;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Debug;
-		};
-		F8A0AF6B209FE4AE008A06AD /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/watchOS",
-				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = NukeAVIFPlugin;
-				SDKROOT = watchos;
-				SKIP_INSTALL = YES;
-				SUPPORTED_PLATFORMS = "watchsimulator watchos";
-				TARGETED_DEVICE_FAMILY = 4;
-			};
-			name = Release;
-		};
-		F8BAAED1200EDE100001110D /* Debug */ = {
+		65E4574E27661F7A008C29A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -902,13 +305,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -930,29 +333,28 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
-				MTL_ENABLE_DEBUG_INFO = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				SWIFT_VERSION = 5.0;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
-		F8BAAED2200EDE100001110D /* Release */ = {
+		65E4574F27661F7A008C29A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
 				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
@@ -968,13 +370,13 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
@@ -991,242 +393,110 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
-				SWIFT_VERSION = 5.0;
-				TVOS_DEPLOYMENT_TARGET = 11.0;
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
-				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
-		F8BAAED4200EDE100001110D /* Debug */ = {
+		65E4575127661F7A008C29A1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
+				INFOPLIST_FILE = "$(SRCROOT)/Nuke_AVIF_PluginTests/Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		65E4575227661F7A008C29A1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Nuke_AVIF_PluginTests/Info.plist";
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SKIP_INSTALL = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		65E457802766217A008C29A1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "$(SRCROOT)/Nuke_AVIF_PluginTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = NukeAVIFPlugin;
-				SKIP_INSTALL = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
-		F8BAAED5200EDE100001110D /* Release */ = {
+		65E457812766217A008C29A1 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-					"$(PROJECT_DIR)/Carthage/Build/tvOS",
-				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = "$(SRCROOT)/Nuke_AVIF_PluginTests/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = NukeAVIFPlugin;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F8BAAED7200EDE100001110D /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTests";
-				PRODUCT_NAME = "NukeAVIFPlugin Tests iOS";
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F8BAAED8200EDE100001110D /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTests";
-				PRODUCT_NAME = "NukeAVIFPlugin Tests iOS";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F8E345452099337A002A0D95 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = NukeAVIFPlugin;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F8E345462099337A002A0D95 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEFINES_MODULE = YES;
-				DEVELOPMENT_TEAM = "";
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				HEADER_SEARCH_PATHS = "Carthage/Checkouts/libavif/**";
-				INFOPLIST_FILE = "$(SRCROOT)/Supporting Files/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "$(SRCROOT)/Supporting Files/module.modulemap";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-Plugin";
-				PRODUCT_NAME = NukeAVIFPlugin;
-				SDKROOT = macosx;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Release;
-		};
-		F8E3455A20993551002A0D95 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTests";
-				PRODUCT_NAME = "NukeAVIFPlugin Tests macOS";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
-				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
-				TARGETED_DEVICE_FAMILY = "1,2";
-			};
-			name = Debug;
-		};
-		F8E3455B20993551002A0D95 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = "";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/Mac",
-				);
-				INFOPLIST_FILE = "$(SRCROOT)/Tests/Info.plist";
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.github.delneg.Nuke-AVIF-PluginTests";
-				PRODUCT_NAME = "NukeAVIFPlugin Tests macOS";
-				PROVISIONING_PROFILE_SPECIFIER = "";
-				SDKROOT = macosx;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -1234,76 +504,34 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		F80D7467209FD9B10015EA10 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin tvOS" */ = {
+		65E4574327661F7A008C29A1 /* Build configuration list for PBXProject "Nuke-AVIF-Plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F80D7468209FD9B10015EA10 /* Debug */,
-				F80D7469209FD9B10015EA10 /* Release */,
+				65E4574E27661F7A008C29A1 /* Debug */,
+				65E4574F27661F7A008C29A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F80D7489209FDD810015EA10 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-PluginTests tvOS" */ = {
+		65E4575027661F7A008C29A1 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F80D748A209FDD810015EA10 /* Debug */,
-				F80D748B209FDD810015EA10 /* Release */,
+				65E4575127661F7A008C29A1 /* Debug */,
+				65E4575227661F7A008C29A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		F8A0AF69209FE4AE008A06AD /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin watchOS" */ = {
+		65E4577F2766217A008C29A1 /* Build configuration list for PBXNativeTarget "Nuke_AVIF_PluginTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				F8A0AF6A209FE4AE008A06AD /* Debug */,
-				F8A0AF6B209FE4AE008A06AD /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8BAAEB9200EDE100001110D /* Build configuration list for PBXProject "Nuke-AVIF-Plugin" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8BAAED1200EDE100001110D /* Debug */,
-				F8BAAED2200EDE100001110D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8BAAED3200EDE100001110D /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8BAAED4200EDE100001110D /* Debug */,
-				F8BAAED5200EDE100001110D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8BAAED6200EDE100001110D /* Build configuration list for PBXNativeTarget "Nuke-AVIF-PluginTests iOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8BAAED7200EDE100001110D /* Debug */,
-				F8BAAED8200EDE100001110D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8E345442099337A002A0D95 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-Plugin macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8E345452099337A002A0D95 /* Debug */,
-				F8E345462099337A002A0D95 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F8E3455920993551002A0D95 /* Build configuration list for PBXNativeTarget "Nuke-AVIF-PluginTests macOS" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				F8E3455A20993551002A0D95 /* Debug */,
-				F8E3455B20993551002A0D95 /* Release */,
+				65E457802766217A008C29A1 /* Debug */,
+				65E457812766217A008C29A1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+	};
+	rootObject = 65E4574027661F7A008C29A1 /* Project object */;
+}
