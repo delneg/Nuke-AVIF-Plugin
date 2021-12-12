@@ -1,8 +1,24 @@
-source 'https://github.com/cocoaPods/specs.git'
-use_frameworks!
-
+install! 'cocoapods', :generate_multiple_pod_projects => true
 platform :ios, '11.0'
 
+av1_codec = 'svt-av1'
 target 'Nuke-AVIF-Demo' do
   pod 'Nuke-AVIF-Plugin', :path => '../'
+  pod 'libavif', :subspecs => [av1_codec]
+
+  # target 'SDWebImageAVIFCoder_Tests' do
+  #   inherit! :search_paths
+  # end
 end
+
+# target 'SDWebImageAVIFCoder_Example macOS' do
+#   platform :osx, '10.11'
+#   pod 'SDWebImageAVIFCoder', :path => '../'
+#   pod 'libavif', :subspecs => [av1_codec]
+# end
+#
+# target 'SDWebImageAVIFCoder_Example CLI' do
+#   platform :osx, '10.11'
+#   pod 'SDWebImageAVIFCoder', :path => '../'
+#   pod 'libavif', :subspecs => [av1_codec]
+# end

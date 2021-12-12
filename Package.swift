@@ -17,11 +17,7 @@ let package = Package(
     targets: [
         .target(
             name: "NukeAVIFPlugin",
-            dependencies: [
-//                "NukeAVIFPluginC",
-                .product(name: "Nuke", package: "Nuke"),
-                .product(name: "libavif", package: "libavif-Xcode"),
-                ],
+            dependencies: ["Nuke", "libavif"],
             path: "Source",
             exclude: [
 //                "libavif",
