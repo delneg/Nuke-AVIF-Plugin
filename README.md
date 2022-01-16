@@ -27,7 +27,7 @@ Nuke.loadImage(with: url, into: imageView)
 ### [CocoaPods](https://cocoapods.org/)
 
 ```ruby
-pod 'Nuke-AVIF-Plugin'
+pod 'Nuke-AVIF-Plugin', :git => 'https://github.com/delneg/Nuke-AVIF-Plugin.git'
 ```
 
 ### [Carthage](https://github.com/Carthage/Carthage)
@@ -35,6 +35,12 @@ pod 'Nuke-AVIF-Plugin'
 ```ruby
 github 'delneg/Nuke-AVIF-Plugin'
 ```
+
+### [Swift Package Manager](https://swift.org/package-manager/)
+
+Go to `File / Swift Packages / Add Package Dependency…`
+and enter package repository URL https://github.com/delneg/Nuke-AVIF-Plugin.git, then select the latest exact version (0.9.3)
+ at the time of writing.
 
 ## Minimum Requirements
 
