@@ -39,12 +39,7 @@ let package = Package(
             ],
             publicHeadersPath: "AVIF",
             cSettings: [
-                .headerSearchPath("libavif"),
-                .headerSearchPath("libavif/include/"),
-            ],
-            cxxSettings: [
-              .headerSearchPath("libavif"),
-              .headerSearchPath("libavif/include/"),
+                .headerSearchPath("AVIF/include/"),
             ]
         ),
     ]
