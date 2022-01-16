@@ -4,7 +4,7 @@ import PackageDescription
 let package = Package(
     name: "Nuke-AVIF-Plugin",
     platforms: [
-        .iOS(.v13),
+        .iOS(.v11),
         .macOS(.v10_13),
         ],
     products: [
@@ -20,7 +20,6 @@ let package = Package(
             dependencies: ["Nuke", "libavif"],
             path: "Source",
             exclude: [
-//                "libavif",
                 "AVIF",
             ],
             sources: [
@@ -28,22 +27,5 @@ let package = Package(
                 "Extensions",
             ]
         )
-//        .target(
-//            name: "NukeAVIFPluginC",
-//            path: "Source",
-//            exclude: [
-//                "WebPImage.swift",
-//                "Extensions",
-//            ],
-//            publicHeadersPath: "AVIF",
-//            cSettings: [
-//                .headerSearchPath("libavif"),
-//                .headerSearchPath("libavif/include/"),
-//            ],
-//            cxxSettings: [
-//              .headerSearchPath("libavif"),
-//              .headerSearchPath("libavif/include/"),
-//            ]
-//        ),
     ]
 )
