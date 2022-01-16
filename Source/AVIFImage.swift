@@ -8,9 +8,9 @@
 
 import Foundation
 import Nuke
-//#if SWIFT_PACKAGE
-//import NukeAVIFPluginC
-//#endif
+#if SWIFT_PACKAGE
+import NukeAVIFPluginC
+#endif
 
 public class AVIFImageDecoder: Nuke.ImageDecoding {
 

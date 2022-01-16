@@ -19,10 +19,30 @@ let package = Package(
             name: "NukeAVIFPlugin",
             dependencies: ["Nuke", "libavif-XCode"],
             path: "Source",
+            exclude: [
+                "AVIF",
+            ],
             sources: [
                 "AVIFImage.swift",
                 "Extensions",
             ]
-        )
+        ),
+        .target(
+            name: "NukeAVIFPluginC",
+            path: "Source",
+            exclude: [
+                "AVIFImage.swift",
+                "Extensions",
+            ],
+            publicHeadersPath: "AVIF",
+            cSettings: [
+                .headerSearchPath("libavif"),
+                .headerSearchPath("libavif/include/"),
+            ],
+            cxxSettings: [
+              .headerSearchPath("libavif"),
+              .headerSearchPath("libavif/include/"),
+            ]
+        ),
     ]
 )
