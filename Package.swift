@@ -19,9 +19,6 @@ let package = Package(
             name: "NukeAVIFPlugin",
             dependencies: ["Nuke", "libavif-XCode"],
             path: "Source",
-            exclude: [
-                "AVIF",
-            ],
             sources: [
                 "AVIFImage.swift",
                 "Extensions",
