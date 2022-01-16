@@ -12,12 +12,12 @@ let package = Package(
     ],
     dependencies: [
         .package(url: "https://github.com/kean/Nuke.git", .upToNextMajor(from: "10.0.0")),
-        .package(url: "https://github.com/delneg/libavif.git", from: "0.9.3")
+        .package(url: "https://github.com/delneg/libavif-XCode.git", from: "0.9.3")
     ],
     targets: [
         .target(
             name: "NukeAVIFPlugin",
-            dependencies: ["Nuke", "libavif"],
+            dependencies: ["Nuke", "libavif-XCode"],
             path: "Source",
             exclude: [
                 "AVIF",

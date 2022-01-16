@@ -11,11 +11,11 @@
         }
       },
       {
-        "package": "libavif",
-        "repositoryURL": "https://github.com/delneg/libavif.git",
+        "package": "libavif-XCode",
+        "repositoryURL": "https://github.com/delneg/libavif-XCode.git",
         "state": {
           "branch": null,
-          "revision": "b6fa6e2b3ce600c504de2cb6bb5e2deec1d941e4",
+          "revision": "7eaf7be7fedff95e48973af94d29dde78fc4b493",
           "version": "0.9.3"
         }
       },
