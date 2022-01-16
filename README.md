@@ -52,7 +52,7 @@ and enter package repository URL https://github.com/delneg/Nuke-AVIF-Plugin.git,
 
 | [Nuke](https://github.com/kean/Nuke) | [libavif](https://github.com/delneg/libavif-XCode) |
 |:------------------------------------:|:--------------------------------------------------:|
-|                >= 9.0                |                       v0.9.2                       |
+|                >= 9.0                |                       v0.9.3                       |
 
 
 ## License
