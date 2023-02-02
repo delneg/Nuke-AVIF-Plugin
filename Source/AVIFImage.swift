@@ -37,12 +37,14 @@ public final class AVIFImageDecoder: Nuke.ImageDecoding {
 extension AVIFImageDecoder {
 
     public static func enable() {
+        guard #unavailable(iOS 16.0, macOS 13.0) else { return }
         Nuke.ImageDecoderRegistry.shared.register { (context) -> ImageDecoding? in
             AVIFImageDecoder.enable(context: context)
         }
     }
 
     public static func enable(context: Nuke.ImageDecodingContext) -> Nuke.ImageDecoding? {
+        guard #unavailable(iOS 16.0, macOS 13.0) else { return nil }
         return context.data.isAVIFFormat ? AVIFImageDecoder() : nil
     }
 
