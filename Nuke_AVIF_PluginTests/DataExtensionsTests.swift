@@ -12,17 +12,17 @@ import XCTest
 class DataExtensionsTests: XCTestCase {
 
     private lazy var avifImagePath: URL = {
-        let avifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "avif")!
+        let avifImagePath = BundleToken.bundle.url(forResource: "sample", withExtension: "avif")!
         return avifImagePath
     }()
     
     private lazy var gifImagePath: URL = {
-        let gifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "gif")!
+        let gifImagePath = BundleToken.bundle.url(forResource: "sample", withExtension: "gif")!
         return gifImagePath
     }()
 
     private lazy var webpImagePath: URL = {
-        let webpImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "webp")!
+        let webpImagePath = BundleToken.bundle.url(forResource: "sample", withExtension: "webp")!
         return webpImagePath
     }()
     
@@ -36,14 +36,14 @@ class DataExtensionsTests: XCTestCase {
         super.tearDown()
     }
 
-    func testsDataIsAVIFFormat() {
-        let avifData = try! Data(contentsOf: self.avifImagePath)
+    func testsDataIsAVIFFormat() throws {
+        let avifData = try Data(contentsOf: self.avifImagePath)
         XCTAssertTrue(avifData.isAVIFFormat)
 
-        let gifData = try! Data(contentsOf: self.gifImagePath)
+        let gifData = try Data(contentsOf: self.gifImagePath)
         XCTAssertFalse(gifData.isAVIFFormat)
 
-        let webpData = try! Data(contentsOf: self.webpImagePath)
+        let webpData = try Data(contentsOf: self.webpImagePath)
         XCTAssertFalse(webpData.isAVIFFormat)
     }
 

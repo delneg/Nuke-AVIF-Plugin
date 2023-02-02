@@ -43,5 +43,17 @@ let package = Package(
                 .headerSearchPath("AVIF/include/"),
             ]
         ),
+        .testTarget(
+            name: "Nuke_AVIF_PluginTests",
+            dependencies: [
+                "NukeAVIFPlugin"
+            ],
+            path: "Nuke_AVIF_PluginTests",
+            exclude: [
+                "Info.plist"
+            ],
+            resources: [
+                .process("Resource")
+            ])
     ]
 )
