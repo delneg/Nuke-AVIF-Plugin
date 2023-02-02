@@ -1,43 +1,41 @@
 {
-  "object": {
-    "pins": [
-      {
-        "package": "libaom",
-        "repositoryURL": "https://github.com/SDWebImage/libaom-Xcode.git",
-        "state": {
-          "branch": null,
-          "revision": "482cafbebbc5f32378b82339b7580761fab4fd23",
-          "version": "2.0.2"
-        }
-      },
-      {
-        "package": "libavif-XCode",
-        "repositoryURL": "https://github.com/delneg/libavif-XCode.git",
-        "state": {
-          "branch": null,
-          "revision": "7eaf7be7fedff95e48973af94d29dde78fc4b493",
-          "version": "0.9.3"
-        }
-      },
-      {
-        "package": "libvmaf",
-        "repositoryURL": "https://github.com/SDWebImage/libvmaf-Xcode.git",
-        "state": {
-          "branch": null,
-          "revision": "26544e92506764862358ce2198ddab9af7685ed5",
-          "version": "2.2.0"
-        }
-      },
-      {
-        "package": "Nuke",
-        "repositoryURL": "https://github.com/kean/Nuke.git",
-        "state": {
-          "branch": null,
-          "revision": "6be3e778f1663b16dd645b7e8a0a01f73b5ed7f3",
-          "version": "10.5.2"
-        }
+  "pins" : [
+    {
+      "identity" : "libaom-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/libaom-Xcode.git",
+      "state" : {
+        "revision" : "482cafbebbc5f32378b82339b7580761fab4fd23",
+        "version" : "2.0.2"
       }
-    ]
-  },
-  "version": 1
+    },
+    {
+      "identity" : "libavif-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/libavif-Xcode.git",
+      "state" : {
+        "revision" : "95551e4f2a0b256c9e746732d82138b904edefd3",
+        "version" : "0.10.1"
+      }
+    },
+    {
+      "identity" : "libvmaf-xcode",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/SDWebImage/libvmaf-Xcode.git",
+      "state" : {
+        "revision" : "26544e92506764862358ce2198ddab9af7685ed5",
+        "version" : "2.2.0"
+      }
+    },
+    {
+      "identity" : "nuke",
+      "kind" : "remoteSourceControl",
+      "location" : "https://github.com/kean/Nuke.git",
+      "state" : {
+        "revision" : "93c8dc78fbc0aa3538a0db460eb389d4180af242",
+        "version" : "11.3.1"
+      }
+    }
+  ],
+  "version" : 2
 }

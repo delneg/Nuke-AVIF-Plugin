@@ -38,7 +38,7 @@ Pod::Spec.new do |s|
   s.module_name       = 'NukeAVIFPlugin'
 
   s.dependency 'libavif', '>= 0.9.1'
-  s.dependency 'Nuke', '~> 9.0'
+  s.dependency 'Nuke', '~> 11.0'
   s.libraries = 'c++'
 
 end

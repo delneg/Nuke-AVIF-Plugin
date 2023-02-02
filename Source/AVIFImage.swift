@@ -9,19 +9,19 @@
 import Foundation
 import Nuke
 #if SWIFT_PACKAGE
-import NukeAVIFPluginC
+@preconcurrency import NukeAVIFPluginC
 #endif
 
-public class AVIFImageDecoder: Nuke.ImageDecoding {
-
-    private lazy var decoder: AVIFDataDecoder = AVIFDataDecoder()
+public final class AVIFImageDecoder: Nuke.ImageDecoding {
+    
+    private let decoder: AVIFDataDecoder = AVIFDataDecoder()
 
     public init() {
     }
 
-    public func decode(_ data: Data) -> ImageContainer? {
-        guard data.isAVIFFormat else { return nil }
-        guard let image = _decode(data) else { return nil }
+    public func decode(_ data: Data) throws -> Nuke.ImageContainer {
+        guard data.isAVIFFormat else { throw ImageDecodingError.unknown }
+        guard let image = _decode(data) else { throw ImageDecodingError.unknown }
         return ImageContainer(image: image)
     }
 
