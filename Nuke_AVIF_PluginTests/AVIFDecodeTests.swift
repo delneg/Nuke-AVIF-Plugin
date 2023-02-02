@@ -7,18 +7,21 @@
 //
 
 import XCTest
-import Nuke
 @testable import NukeAVIFPlugin
+#if SWIFT_PACKAGE
+import NukeAVIFPluginC
+#endif
 
+#if os(iOS)
 class AVIFDecodeTests: XCTestCase {
 
     private lazy var avifImagePath: URL = {
-        let avifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "avif")!
+        let avifImagePath = BundleToken.bundle.url(forResource: "sample", withExtension: "avif")!
         return avifImagePath
     }()
     
     private lazy var gifImagePath: URL = {
-        let gifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "gif")!
+        let gifImagePath = BundleToken.bundle.url(forResource: "sample", withExtension: "gif")!
         return gifImagePath
     }()
     
@@ -32,56 +35,53 @@ class AVIFDecodeTests: XCTestCase {
         super.tearDown()
     }
     
-    func testsDecodeAVIFImage() {
-        let avifData = try! Data(contentsOf: self.avifImagePath)
-        let image: UIImage? = UIImage(data: avifData)
-        XCTAssertNil(image)
+    func testsDecodeAVIFImage() throws {
+        let avifData = try Data(contentsOf: self.avifImagePath)
+        if #unavailable(iOS 16.0) {
+            let image: UIImage? = UIImage(data: avifData)
+            XCTAssertNil(image)
+        }
         
-        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
+        let decoder = NukeAVIFPluginC.AVIFDataDecoder();
         let avifImage: UIImage? = decoder.decode(avifData)
         XCTAssertNotNil(avifImage)
     }
 
-    func testsDecodeNotAVIFImage() {
-        let gifData = try! Data(contentsOf: self.gifImagePath)
+    func testsDecodeNotAVIFImage() throws {
+        let gifData = try Data(contentsOf: self.gifImagePath)
         let image: UIImage? = UIImage(data: gifData)
         XCTAssertNotNil(image)
 
-        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
+        let decoder = NukeAVIFPluginC.AVIFDataDecoder();
         let avifImage: UIImage? = decoder.decode(gifData)
         XCTAssertNil(avifImage)
     }
 
-    func testsProgressiveDecodeAVIFImage() {
-        let avifData = try! Data(contentsOf: self.avifImagePath)
-        let decoder = NukeAVIFPlugin.AVIFDataDecoder();
+    func testsProgressiveDecodeAVIFImage() throws {
+        let avifData = try Data(contentsOf: self.avifImagePath)
+        let decoder = NukeAVIFPluginC.AVIFDataDecoder();
         // no image
         XCTAssertNil(decoder.incrementallyDecode(avifData[0...200]))
 
         // created image
         let scan1 = decoder.incrementallyDecode(avifData[0...8000])
         XCTAssertNotNil(scan1)
-        XCTAssertEqual(scan1!.size.width, 200)
-        XCTAssertEqual(scan1!.size.height, 180)
+        XCTAssertEqual(scan1?.size.width, 200)
+        XCTAssertEqual(scan1?.size.height, 180)
 
         let scan2 = decoder.incrementallyDecode(avifData)
         XCTAssertNotNil(scan2)
-        XCTAssertEqual(scan2!.size.width, 200)
-        XCTAssertEqual(scan2!.size.height, 180)
+        XCTAssertEqual(scan2?.size.width, 200)
+        XCTAssertEqual(scan2?.size.height, 180)
     }
 
-    func testPerformanceDecodeAVIF() {
+    func testPerformanceDecodeAVIF() throws {
         // This is an example of a performance test case.
         self.measure {
             // Put the code you want to measure the time of here.
-            let avifData = try! Data(contentsOf: self.avifImagePath)
-            let image: UIImage? = UIImage(data: avifData)
-            XCTAssertNil(image)
-
-            let decoder = NukeAVIFPlugin.AVIFDataDecoder();
-            let avifImage: UIImage? = decoder.decode(avifData)
-            XCTAssertNotNil(avifImage)
+            try? testsDecodeAVIFImage()
         }
     }
     
 }
+#endif

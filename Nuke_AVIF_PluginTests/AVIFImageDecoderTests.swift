@@ -11,9 +11,9 @@ import Nuke
 @testable import NukeAVIFPlugin
 
 class AVIFImageDecoderTests: XCTestCase {
-
+    
     private lazy var avifImagePath: URL = {
-        let avifImagePath = Bundle(for: type(of: self)).url(forResource: "sample", withExtension: "avif")!
+        let avifImagePath = BundleToken.bundle.url(forResource: "sample", withExtension: "avif")!
         return avifImagePath
     }()
 
@@ -29,21 +29,20 @@ class AVIFImageDecoderTests: XCTestCase {
         super.tearDown()
     }
 
-    func testsProgressiveDecodeAVIFImageDecoder() {
-        let avifData = try! Data(contentsOf: self.avifImagePath)
+    func testsProgressiveDecodeAVIFImageDecoder() throws {
+        let avifData = try Data(contentsOf: self.avifImagePath)
         let decoder = NukeAVIFPlugin.AVIFImageDecoder()
         
         // no image
-        XCTAssertNil(decoder.decode(avifData[0...500]))
+        XCTAssertThrowsError(try decoder.decode(avifData[0...500]))
         
         // created image
-        let scan1 = decoder.decode(avifData[0...3702])
-        XCTAssertNil(scan1)
+        XCTAssertThrowsError(try decoder.decode(avifData[0...3702]))
 
-        let scan2 = decoder.decode(avifData)
+        let scan2 = try decoder.decode(avifData)
         XCTAssertNotNil(scan2)
-        XCTAssertEqual(scan2!.image.size.width, 320)
-        XCTAssertEqual(scan2!.image.size.height, 235)
+        XCTAssertEqual(scan2.image.size.width, 200)
+        XCTAssertEqual(scan2.image.size.height, 180)
     }
 
     func testsImageDecoderRegistryRegistered() {
