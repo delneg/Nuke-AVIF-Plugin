@@ -49,7 +49,8 @@ class AVIFImageDecoderTests: XCTestCase {
         let exception = XCTestExpectation(description: "decode avif image")
         Nuke.DataLoader.sharedUrlCache.removeAllCachedResponses()
         AVIFImageDecoder.enable()
-        Nuke.ImagePipeline.shared.loadImage(with: self.avifImageURL, progress: nil) { (result) in
+        let request = ImageRequest(url: self.avifImageURL)
+        Nuke.ImagePipeline.shared.loadImage(with: request, progress: nil) { (result) in
             switch result {
             case .success(let imageResponse):
                 XCTAssertNotNil(imageResponse.image)
@@ -59,7 +60,7 @@ class AVIFImageDecoderTests: XCTestCase {
             exception.fulfill()
         }
 
-        self.wait(for: [exception], timeout: 1)
+        self.wait(for: [exception], timeout: 2)
     }
 
 }

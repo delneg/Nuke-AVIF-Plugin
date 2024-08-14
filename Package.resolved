@@ -1,4 +1,5 @@
 {
+  "originHash" : "0c52c84849acb64c0549eb830befcc5b1c522f7597beb1563daae20c0285de0d",
   "pins" : [
     {
       "identity" : "libaom-xcode",
@@ -32,10 +33,10 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/kean/Nuke.git",
       "state" : {
-        "revision" : "93c8dc78fbc0aa3538a0db460eb389d4180af242",
-        "version" : "11.3.1"
+        "revision" : "0ead44350d2737db384908569c012fe67c421e4d",
+        "version" : "12.8.0"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
